@@ -8,7 +8,9 @@ import Experiences from '@/components/sections/Experiences';
 import Projects from '@/components/sections/Projects';
 import Skills from '@/components/sections/Skills';
 import WorkProcess from '@/components/sections/WorkProcess';
-import Services from './components/sections/Services';
+import Services from '@/components/sections/Services';
+import Contact from '@/components/sections/Contact';
+import Footer from '@/components/Footer';
 
 export default function App() {
     return (
@@ -24,6 +26,8 @@ export default function App() {
                 <Skills />
                 <Services />
                 <WorkProcess />
+                <Contact />
+                <Footer />
             </main>
         </ThemeProvider>
     );
