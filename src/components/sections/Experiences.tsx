@@ -35,21 +35,11 @@ export function TimelineCard({ item }: { item: Timeline }) {
 
             {/* Content */}
             <div className="p-5">
-                <h3
-                    className="text-base text-(--text-primary) font-bold mb-2.5"
-                >
-                    {item.title}
-                </h3>
+                <h3 className="text-base text-(--text-primary) font-bold mb-2.5">{item.title}</h3>
 
-                <p
-                    className="text-sm text-(--accent) mb-2"
-                >
-                    {item.company}
-                </p>
+                <p className="text-sm text-(--accent) mb-2">{item.company}</p>
 
-                <p
-                    className="text-sm leading-relaxed text-(--text-secondary) mb-4 line-clamp-3"
-                >
+                <p className="text-sm leading-relaxed text-(--text-secondary) mb-4 line-clamp-3">
                     {item.description}
                 </p>
 
@@ -114,7 +104,7 @@ export default function Timeline() {
                         1024: { slidesPerView: 3 },
                     }}
                     style={{
-                        paddingBottom: "50px"
+                        paddingBottom: '50px',
                     }}
                 >
                     {timeline.map((item, i) => (

@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experiences from '@/components/sections/Experiences';
+import Projects from './components/sections/Projects';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                 <Hero />
                 <About />
                 <Experiences />
+                <Projects />
             </main>
         </ThemeProvider>
     );

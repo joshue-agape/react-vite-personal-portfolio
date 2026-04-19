@@ -51,7 +51,7 @@ export type Timeline = {
     description: string;
     tags: string[];
     image: string;
-}
+};
 
 export const timeline: Timeline[] = [
     {
@@ -63,7 +63,7 @@ export const timeline: Timeline[] = [
         description:
             'Design and development of a complete solution ensuring reliability and performance. Implementation of a dynamic interface to visualize analyzed emails and integration of data processed by n8n workflows with filtering and organization.',
         tags: ['React.js', 'PostgreSQL', 'Flask', 'N8N', 'Docker'],
-        image: "/experiences/n8n-autoflow.png",
+        image: '/experiences/n8n-autoflow.png',
     },
     {
         year: 'Oct. 2025 - Nov. 2025',
@@ -74,7 +74,7 @@ export const timeline: Timeline[] = [
         description:
             'Full development of the application including image capture and enhancement. Creation of visualization, editing, and data export interfaces, and implementation of an adaptable OCR engine to extract information according to specifications.',
         tags: ['Flutter', 'Django', 'PostgreSQL', 'Tesseract OCR', 'Hugging Face'],
-        image: "/experiences/flutter-django.png",
+        image: '/experiences/flutter-django.png',
     },
     {
         year: 'Aug. 2024 - Dec. 2024',
@@ -85,7 +85,7 @@ export const timeline: Timeline[] = [
         description:
             'Design and development of an appointment management application synchronized with Google Calendar. Implementation of a RESTful and WebSocket API for real-time communication and front-end and back-end development for a smooth and responsive user interface.',
         tags: ['Quasar', 'PostgreSQL', 'Nest.js', 'Prisma ORM', 'Google Calendar API'],
-        image: "/experiences/nest-vue.webp",
+        image: '/experiences/nest-vue.webp',
     },
     {
         year: 'May 2024 - Sept. 2024',
@@ -96,7 +96,7 @@ export const timeline: Timeline[] = [
         description:
             'Optimization of existing code to improve performance and usability. Development of new features according to client requirements and bug fixes to enhance the user experience.',
         tags: ['Node.js', 'Express', 'Docker', 'websocket'],
-        image: "/experiences/node-express.jpg",
+        image: '/experiences/node-express.jpg',
     },
     {
         year: 'Sept. 2023 - Nov. 2023',
@@ -107,6 +107,105 @@ export const timeline: Timeline[] = [
         description:
             'Design and development of front-end and back-end aspects of websites and web applications. Implementation of software solutions tailored to client needs and development of custom features according to specifications.',
         tags: ['vue.js', 'PHP', 'Laravel', 'jQuery', 'MySQL'],
-        image: "/experiences/laravel.png",
+        image: '/experiences/laravel.png',
+    },
+];
+
+export const projects = [
+    {
+        id: 1,
+        title: 'StockFlow',
+        description:
+            'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
+        longDescription:
+            'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
+        tags: ['React', 'Hero UI', 'Tailwindcss', 'Node.js', 'Express', 'PostgreSQL'],
+        category: 'Application Web',
+        github: '#',
+        demo: '#',
+        stars: 142,
+        featured: true,
+        metrics: [''],
+        color: 'accent',
+    },
+    {
+        id: 2,
+        title: 'Planning',
+        description:
+            'Outil collaboratif permettant d’organiser des réunions, planifier des projets et coordonner efficacement les activités d’équipe grâce à une gestion claire du calendrier et des tâches.',
+        longDescription:
+            'Outil collaboratif permettant d’organiser des réunions, planifier des projets et coordonner efficacement les activités d’équipe grâce à une gestion claire du calendrier et des tâches.',
+        tags: ['Next', 'HeroUI', 'Tailwindcss', 'Django', 'Postgresql', 'Redis', 'Docker'],
+        category: 'Application Web',
+        github: '#',
+        demo: '#',
+        stars: 89,
+        featured: true,
+        metrics: [''],
+        color: 'green',
+    },
+    {
+        id: 3,
+        title: 'AutoFlow',
+        description:
+            'Solution d’automatisation qui analyse les e-mails grâce à l’intelligence artificielle et déclenche des actions via des workflows personnalisés créés avec n8n pour optimiser les tâches répétitives.',
+        longDescription:
+            'Solution d’automatisation qui analyse les e-mails grâce à l’intelligence artificielle et déclenche des actions via des workflows personnalisés créés avec n8n pour optimiser les tâches répétitives.',
+        tags: ['React', 'Shadecn UI', 'Tailwindcss', 'Flask', 'Redis', 'PostgreSQL', 'N8N'],
+        category: 'Application Web + IA',
+        github: '#',
+        demo: '#',
+        stars: 234,
+        featured: true,
+        metrics: [''],
+        color: 'purple',
+    },
+    {
+        id: 4,
+        title: 'Smart Shopping',
+        description:
+            'Système de gestion e-commerce où l’administrateur organise les produits par catégories, suit les clients, gère les commandes et supervise efficacement les livraisons depuis un tableau de bord centralisé.',
+        longDescription:
+            'Système de gestion e-commerce où l’administrateur organise les produits par catégories, suit les clients, gère les commandes et supervise efficacement les livraisons depuis un tableau de bord centralisé.',
+        tags: ['Vue', 'PrimeVue', 'Tailwindcss', 'Express', 'PostgreSQL'],
+        category: 'Application Web',
+        github: '#',
+        demo: '#',
+        stars: 178,
+        featured: true,
+        metrics: [''],
+        color: 'orange',
+    },
+    {
+        id: 5,
+        title: 'MediBook',
+        description:
+            'Plateforme permettant de trouver rapidement des médecins spécialistes à proximité, consulter leurs disponibilités et prendre rendez-vous en ligne de manière simple, rapide et pratique.',
+        longDescription:
+            'Plateforme permettant de trouver rapidement des médecins spécialistes à proximité, consulter leurs disponibilités et prendre rendez-vous en ligne de manière simple, rapide et pratique.',
+        tags: ['React', 'Shadecn UI', 'Tailwindcss', 'Nest', 'Postgresql'],
+        category: 'Application Web',
+        github: '#',
+        demo: '#',
+        stars: 67,
+        featured: true,
+        metrics: [''],
+        color: 'accent',
+    },
+    {
+        id: 6,
+        title: 'Sendora',
+        description:
+            'Plateforme permettant de trouver rapidement des médecins spécialistes à proximité, consulter leurs disponibilités et prendre rendez-vous en ligne de manière simple, rapide et pratique.',
+        longDescription:
+            'Plateforme permettant de trouver rapidement des médecins spécialistes à proximité, consulter leurs disponibilités et prendre rendez-vous en ligne de manière simple, rapide et pratique.',
+        tags: ['React', 'Material UI', 'FastAPI', 'Tailwindcss', 'PostgreSQL'],
+        category: 'Application Web + cloud',
+        github: '#',
+        demo: '#',
+        stars: 95,
+        featured: true,
+        metrics: [''],
+        color: 'green',
     },
 ];
