@@ -293,81 +293,81 @@ export const frameworks = [
 
 export const services = [
     {
-        icon: '🔄',
-        title: 'CI/CD Architecture',
+        icon: '💻',
+        title: 'Front-End Web Development',
         description:
-            'Conception et déploiement de pipelines CI/CD complets : build, test, security scan, staging, production avec approval gates et rollback automatique.',
+            'Building modern, responsive, and high-performance web interfaces optimized for all devices and browsers.',
         features: [
-            'GitHub Actions / GitLab CI',
-            'Blue/Green & Canary deployments',
-            'Security gates intégrés',
-            'Multi-environment strategy',
+            'Tech: React, Next.js, Vue, Angular',
+            'Styling: Tailwind CSS, Bootstrap',
+            'UI Libraries: MUI, Shadcn UI, PrimeVue',
         ],
         color: 'accent',
     },
     {
-        icon: '☁️',
-        title: 'Cloud Infrastructure',
+        icon: '📱',
+        title: 'Mobile Development',
         description:
-            "Design et déploiement d'architectures cloud-native sur AWS, GCP ou Azure. Multi-region, haute disponibilité, optimisation des coûts.",
+            'Developing scalable and user-friendly mobile applications with seamless performance across platforms.',
         features: [
-            'Infrastructure as Code (Terraform)',
-            'FinOps & cost optimization',
-            'Multi-cloud strategy',
-            'Landing Zones & governance',
-        ],
-        color: 'blue',
-    },
-    {
-        icon: '☸️',
-        title: 'Kubernetes & Containers',
-        description:
-            'Mise en place et opération de clusters Kubernetes en production. GitOps avec ArgoCD, service mesh, observabilité native K8s.',
-        features: [
-            'EKS / GKE / AKS',
-            'Helm & Kustomize',
-            'ArgoCD GitOps',
-            'Network policies & RBAC',
+            'Tech: Flutter (Dart), React Native',
+            'Cross-platform development',
+            'Performance optimization',
         ],
         color: 'purple',
     },
     {
-        icon: '📊',
-        title: 'Observabilité & SRE',
+        icon: '🎨',
+        title: 'UI/UX Design',
         description:
-            "Stack d'observabilité complète : métriques, logs, traces. SLO/SLA, alerting intelligent, runbooks automatisés et incident management.",
+            'Designing intuitive and visually engaging interfaces focused on usability, accessibility, and user experience.',
         features: [
-            'Prometheus + Grafana + Loki',
-            'OpenTelemetry tracing',
-            'SLO/Error budget tracking',
-            'On-call & incident management',
+            'Tools: Figma, Lunacy',
+            'Wireframing & prototyping',
+            'Design systems & UI consistency',
+        ],
+        color: 'blue',
+    },
+    {
+        icon: '🧠',
+        title: 'Back-End Development',
+        description:
+            'Building secure, scalable, and efficient server-side systems with robust APIs and database management.',
+        features: [
+            'Languages: TypeScript, Python, PHP, Java',
+            'API & cloud integrations',
+            'Databases: PostgreSQL, MySQL, MongoDB',
         ],
         color: 'green',
     },
     {
-        icon: '🔐',
-        title: 'Security & Compliance',
+        icon: '⚙️',
+        title: 'DevOps / CI-CD',
         description:
-            'DevSecOps intégré : SAST/DAST dans les pipelines, gestion des secrets, conformité CIS, audit et hardening des infrastructures.',
+            'Automating deployment workflows and infrastructure to ensure fast, reliable, and consistent delivery pipelines.',
         features: [
-            'SAST/DAST (Trivy, SonarCloud)',
-            'Vault / Secrets management',
-            'CIS benchmarks',
-            'Zero-trust networking',
+            'Containerization: Docker',
+            'CI/CD: GitHub Actions, Jenkins',
+            'Infrastructure automation',
         ],
         color: 'orange',
     },
     {
-        icon: '⚡',
-        title: 'Automation & Scripting',
+        icon: '📐',
+        title: 'Methodology',
         description:
-            'Automatisation end-to-end : provisioning, configuration, backup, rotation des secrets, self-healing infrastructure.',
-        features: [
-            'Ansible playbooks',
-            'Python automation scripts',
-            'Runbook automation',
-            'Chaos engineering',
-        ],
+            'Applying structured development methodologies to ensure efficient collaboration, delivery, and project success.',
+        features: ['Agile Scrum practices', 'Merise & 2TUP methods', 'Project planning & tracking'],
         color: 'accent',
+    },
+];
+
+export const toolbox = [
+    {
+        source: 'https://github.com/joshue-agape/ps-git-aliases',
+        title: 'Git',
+        description: 'Predefined Git aliases to speed up common version control workflows.',
+        color: 'accent',
+        type: 'Alias PowerShell Windows',
     },
 ];

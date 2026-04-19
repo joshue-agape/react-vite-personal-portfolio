@@ -11,6 +11,7 @@ import WorkProcess from '@/components/sections/WorkProcess';
 import Services from '@/components/sections/Services';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
+import ToolBox from '@/components/sections/ToolBox';
 
 export default function App() {
     return (
@@ -26,6 +27,7 @@ export default function App() {
                 <Skills />
                 <Services />
                 <WorkProcess />
+                <ToolBox />
                 <Contact />
                 <Footer />
             </main>
