@@ -3,6 +3,8 @@ import ParticleBackground from '@/components/ParticleBackground';
 import CustomCursor from '@/components/CustomCursor';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
+import About from '@/components/sections/About';
+import Experiences from '@/components/sections/Experiences';
 
 export default function App() {
     return (
@@ -12,6 +14,8 @@ export default function App() {
                 <CustomCursor />
                 <Navbar />
                 <Hero />
+                <About />
+                <Experiences />
             </main>
         </ThemeProvider>
     );

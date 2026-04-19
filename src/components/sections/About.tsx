@@ -1,0 +1,262 @@
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { personalInfo } from '@/data/portfolio';
+import { staggerContainer, staggerItem, slideInLeft, slideInRight } from '@/utils/animations';
+import { Code2, Server, Smartphone, Wrench, ShieldCheck, Workflow } from 'lucide-react';
+
+const focuses = [
+    { icon: Code2, label: 'Web Development', desc: 'Modern UI · Responsive' },
+    { icon: Server, label: 'Backend Development', desc: 'REST APIs · GraphQL' },
+    { icon: Smartphone, label: 'Mobile Development', desc: 'Flutter · React Native' },
+    { icon: Wrench, label: 'Web Integration & IaC', desc: 'Terraform · Ansible' },
+    { icon: ShieldCheck, label: 'DevOps / CI-CD', desc: 'Jenkins · Docker · Git' },
+    { icon: Workflow, label: 'Methodologies', desc: '2TUP · Agile Scrum' },
+];
+
+export default function About() {
+    const { ref, inView } = useInView({ threshold: 0.15, triggerOnce: true });
+
+    return (
+        <section id="about" ref={ref} className="py-28 relative overflow-hidden">
+            <div className="absolute inset-0" style={{ background: 'var(--bg-secondary)' }} />
+
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={inView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                    className="text-center mb-16"
+                >
+                    <div className="section-label justify-center mb-4">About Me</div>
+                    <h2
+                        className="text-4xl sm:text-5xl font-extrabold"
+                        style={{ color: 'var(--text-primary)' }}
+                    >
+                        Who am <span className="text-gradient">I ?</span>
+                    </h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+                    {/* Left — Bio */}
+                    <motion.div
+                        variants={slideInLeft}
+                        initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'}
+                    >
+                        <div className="space-y-5">
+                            {personalInfo.bio.split('\n\n').map((para, i) => (
+                                <p
+                                    key={i}
+                                    className="text-base leading-relaxed"
+                                    style={{ color: 'var(--text-secondary)' }}
+                                >
+                                    {para}
+                                </p>
+                            ))}
+                        </div>
+
+                        {/* Focus areas */}
+                        <div className="mt-10">
+                            <p
+                                className="text-sm font-mono font-semibold mb-5"
+                                style={{ color: 'var(--text-muted)' }}
+                            >
+                                // Areas of expertise
+                            </p>
+                            <motion.div
+                                variants={staggerContainer}
+                                initial="hidden"
+                                animate={inView ? 'visible' : 'hidden'}
+                                className="grid grid-cols-2 sm:grid-cols-3 gap-3"
+                            >
+                                {focuses.map(({ icon: Icon, label, desc }) => (
+                                    <motion.div
+                                        key={label}
+                                        variants={staggerItem}
+                                        whileHover={{ scale: 1.04, y: -2 }}
+                                        className="p-4 rounded-xl card-hover cursor-default"
+                                        style={{
+                                            background: 'var(--bg-card)',
+                                            border: '1px solid var(--border)',
+                                        }}
+                                    >
+                                        <div
+                                            className="w-8 h-8 rounded-lg flex items-center justify-center mb-2"
+                                            style={{
+                                                background: 'var(--accent-muted)',
+                                                color: 'var(--accent)',
+                                            }}
+                                        >
+                                            <Icon size={16} />
+                                        </div>
+                                        <div
+                                            className="text-sm font-semibold"
+                                            style={{ color: 'var(--text-primary)' }}
+                                        >
+                                            {label}
+                                        </div>
+                                        <div
+                                            className="text-xs mt-0.5 font-mono"
+                                            style={{ color: 'var(--text-muted)' }}
+                                        >
+                                            {desc}
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+                        </div>
+                    </motion.div>
+
+                    {/* Right — Code snippet */}
+                    <motion.div
+                        variants={slideInRight}
+                        initial="hidden"
+                        animate={inView ? 'visible' : 'hidden'}
+                    >
+                        <div
+                            className="code-block rounded-xl overflow-hidden shadow-xl"
+                            style={{ boxShadow: 'var(--shadow-xl)' }}
+                        >
+                            {/* Terminal header */}
+                            <div
+                                className="flex items-center gap-2 pb-4 mb-4 border-b"
+                                style={{ borderColor: 'var(--border)' }}
+                            >
+                                <div
+                                    className="w-3 h-3 rounded-full"
+                                    style={{ background: '#ff5f57' }}
+                                />
+                                <div
+                                    className="w-3 h-3 rounded-full"
+                                    style={{ background: '#ffbd2e' }}
+                                />
+                                <div
+                                    className="w-3 h-3 rounded-full"
+                                    style={{ background: '#28ca41' }}
+                                />
+                                <span
+                                    className="ml-3 text-xs"
+                                    style={{ color: 'var(--text-muted)' }}
+                                >
+                                    profile.py
+                                </span>
+                            </div>
+
+                            {/* Code lines */}
+                            <div className="space-y-1 text-sm font-mono">
+                                <div className="code-comment">
+                                    # Joshué Agapé RAHARISON — DevOps Engineer Profile
+                                </div>
+
+                                <div className="mt-2">
+                                    <span className="code-keyword">class </span>
+                                    <span className="code-accent">Engineer</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}>:</span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-orange">name</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="code-string">"{personalInfo.name}"</span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-orange">birth_date</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="code-string">"{personalInfo.birth}"</span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-orange">role</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="code-string">"{personalInfo.role}"</span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-orange">experience</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="code-string">"{personalInfo.experience}"</span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-orange">languages</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}> = [</span>
+                                    <span className="code-string">"Malagasy"</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}>, </span>
+                                    <span className="code-string">"French"</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}>, </span>
+                                    <span className="code-string">"English"</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}>]</span>
+                                </div>
+
+                                <div className="mt-8"></div>
+
+                                <div>
+                                    <span className="pl-4 code-keyword">def </span>
+                                    <span className="code-accent">find_profile </span>
+                                    <span style={{ color: 'var(--text-secondary)' }}>
+                                        (self, confidence=
+                                    </span>
+                                    <span className="code-keyword">True</span>
+                                    <span style={{ color: 'var(--text-secondary)' }}>):</span>
+                                </div>
+
+                                <div className="pl-10">
+                                    <span className="code-keyword">return {'{'}</span> <br />
+                                    <span className="text-(--text-secondary) ml-5">
+                                        {' '}
+                                        "name": self.
+                                    </span>
+                                    <span className="code-accent">name</span> <br />
+                                    <span className="text-(--text-secondary) ml-5">
+                                        {' '}
+                                        "birth_date": self.
+                                    </span>
+                                    <span className="code-accent">birth_date</span> <br />
+                                    <span className="text-(--text-secondary) ml-5">
+                                        {' '}
+                                        "role": self.
+                                    </span>
+                                    <span className="code-accent">role</span> <br />
+                                    <span className="code-keyword">{'}'}</span> <br />
+                                </div>
+
+                                <div className="mt-3 pl-4">
+                                    <span className="code-comment">
+                                        # SLO: 99.9% system uptime guaranteed
+                                    </span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-comment"># MTTR: &lt; 2 minutes</span>
+                                </div>
+
+                                <div className="pl-4">
+                                    <span className="code-comment"># Monthly incidents: 0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Quick stats chips */}
+                        <div className="mt-6 flex flex-wrap gap-2">
+                            {[
+                                { emoji: '📍', text: 'Based in Fianarantsoa, Madagascar' },
+                                { emoji: '🌍', text: 'Remote-friendly' },
+                            ].map((chip) => (
+                                <motion.span
+                                    key={chip.text}
+                                    whileHover={{ scale: 1.05, y: -1 }}
+                                    className="skill-tag"
+                                >
+                                    <span>{chip.emoji}</span>
+                                    {chip.text}
+                                </motion.span>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+}
