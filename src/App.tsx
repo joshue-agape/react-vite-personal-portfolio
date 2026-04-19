@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experiences from '@/components/sections/Experiences';
 import Projects from './components/sections/Projects';
+import Skills from './components/sections/Skills';
 
 export default function App() {
     return (
@@ -18,6 +19,7 @@ export default function App() {
                 <About />
                 <Experiences />
                 <Projects />
+                <Skills />
             </main>
         </ThemeProvider>
     );
