@@ -9,6 +9,8 @@
 
         /* Bundler mode */
         "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
         "allowImportingTsExtensions": true,
         "verbatimModuleSyntax": true,
         "moduleDetection": "force",
@@ -19,7 +21,14 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "erasableSyntaxOnly": true,
-        "noFallthroughCasesInSwitch": true
+        "noFallthroughCasesInSwitch": true,
+
+        /* Alias @ = src */
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "ignoreDeprecations": "6.0"
     },
     "include": ["src"]
 }
