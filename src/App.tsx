@@ -12,6 +12,7 @@ import Services from '@/components/sections/Services';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
 import ToolBox from '@/components/sections/ToolBox';
+import AIChat from '@/components/AIChat';
 
 export default function App() {
     return (
@@ -30,6 +31,7 @@ export default function App() {
                 <ToolBox />
                 <Contact />
                 <Footer />
+                <AIChat />
             </main>
         </ThemeProvider>
     );
