@@ -290,3 +290,84 @@ export const frameworks = [
     { name: 'Prisma ORM', icon: '/techs/prisma.png' },
     { name: 'Sequelize', icon: '/techs/sequelize.jpg' },
 ];
+
+export const services = [
+    {
+        icon: '🔄',
+        title: 'CI/CD Architecture',
+        description:
+            'Conception et déploiement de pipelines CI/CD complets : build, test, security scan, staging, production avec approval gates et rollback automatique.',
+        features: [
+            'GitHub Actions / GitLab CI',
+            'Blue/Green & Canary deployments',
+            'Security gates intégrés',
+            'Multi-environment strategy',
+        ],
+        color: 'accent',
+    },
+    {
+        icon: '☁️',
+        title: 'Cloud Infrastructure',
+        description:
+            "Design et déploiement d'architectures cloud-native sur AWS, GCP ou Azure. Multi-region, haute disponibilité, optimisation des coûts.",
+        features: [
+            'Infrastructure as Code (Terraform)',
+            'FinOps & cost optimization',
+            'Multi-cloud strategy',
+            'Landing Zones & governance',
+        ],
+        color: 'blue',
+    },
+    {
+        icon: '☸️',
+        title: 'Kubernetes & Containers',
+        description:
+            'Mise en place et opération de clusters Kubernetes en production. GitOps avec ArgoCD, service mesh, observabilité native K8s.',
+        features: [
+            'EKS / GKE / AKS',
+            'Helm & Kustomize',
+            'ArgoCD GitOps',
+            'Network policies & RBAC',
+        ],
+        color: 'purple',
+    },
+    {
+        icon: '📊',
+        title: 'Observabilité & SRE',
+        description:
+            "Stack d'observabilité complète : métriques, logs, traces. SLO/SLA, alerting intelligent, runbooks automatisés et incident management.",
+        features: [
+            'Prometheus + Grafana + Loki',
+            'OpenTelemetry tracing',
+            'SLO/Error budget tracking',
+            'On-call & incident management',
+        ],
+        color: 'green',
+    },
+    {
+        icon: '🔐',
+        title: 'Security & Compliance',
+        description:
+            'DevSecOps intégré : SAST/DAST dans les pipelines, gestion des secrets, conformité CIS, audit et hardening des infrastructures.',
+        features: [
+            'SAST/DAST (Trivy, SonarCloud)',
+            'Vault / Secrets management',
+            'CIS benchmarks',
+            'Zero-trust networking',
+        ],
+        color: 'orange',
+    },
+    {
+        icon: '⚡',
+        title: 'Automation & Scripting',
+        description:
+            'Automatisation end-to-end : provisioning, configuration, backup, rotation des secrets, self-healing infrastructure.',
+        features: [
+            'Ansible playbooks',
+            'Python automation scripts',
+            'Runbook automation',
+            'Chaos engineering',
+        ],
+        color: 'accent',
+    },
+];

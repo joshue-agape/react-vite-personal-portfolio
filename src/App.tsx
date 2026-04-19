@@ -5,8 +5,10 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experiences from '@/components/sections/Experiences';
-import Projects from './components/sections/Projects';
-import Skills from './components/sections/Skills';
+import Projects from '@/components/sections/Projects';
+import Skills from '@/components/sections/Skills';
+import WorkProcess from '@/components/sections/WorkProcess';
+import Services from './components/sections/Services';
 
 export default function App() {
     return (
@@ -20,6 +22,8 @@ export default function App() {
                 <Experiences />
                 <Projects />
                 <Skills />
+                <Services />
+                <WorkProcess />
             </main>
         </ThemeProvider>
     );
