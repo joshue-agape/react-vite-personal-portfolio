@@ -2,6 +2,7 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import ParticleBackground from '@/components/ParticleBackground';
 import CustomCursor from '@/components/CustomCursor';
 import Navbar from '@/components/Navbar';
+import Hero from '@/components/sections/Hero';
 
 export default function App() {
     return (
@@ -10,6 +11,7 @@ export default function App() {
                 <ParticleBackground />
                 <CustomCursor />
                 <Navbar />
+                <Hero />
             </main>
         </ThemeProvider>
     );
