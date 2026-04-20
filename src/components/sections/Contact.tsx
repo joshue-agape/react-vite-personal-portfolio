@@ -77,7 +77,7 @@ export default function Contact() {
 
     return (
         <section id="contact" className="py-28 relative">
-            <div className="absolute inset-0" style={{ background: 'var(--bg-primary)' }} />
+            <div className="absolute inset-0 bg-(--bg-primary)" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -106,29 +106,14 @@ export default function Contact() {
                         className="lg:col-span-2 space-y-6"
                     >
                         {/* Status card */}
-                        <div
-                            className="p-5 rounded-2xl"
-                            style={{
-                                background: 'var(--bg-secondary)',
-                                border: '1px solid var(--border)',
-                            }}
-                        >
+                        <div className="p-5 rounded-2xl bg-(--bg-secondary) border border-(--border)">
                             <div className="flex items-center gap-3 mb-4">
-                                <div
-                                    className="w-3 h-3 rounded-full animate-pulse"
-                                    style={{ background: 'var(--green)' }}
-                                />
-                                <span
-                                    className="text-sm font-semibold"
-                                    style={{ color: 'var(--green)' }}
-                                >
+                                <div className="w-3 h-3 rounded-full animate-pulse bg-(--green)" />
+                                <span className="text-sm font-semibold text-(--green)">
                                     Available for new opportunities.
                                 </span>
                             </div>
-                            <p
-                                className="text-sm leading-relaxed"
-                                style={{ color: 'var(--text-secondary)' }}
-                            >
+                            <p className="text-sm leading-relaxed text-(--text-secondary)">
                                 I am available for freelance work. Feel free to contact me if you
                                 think I could be a good fit for your project.
                             </p>
@@ -141,32 +126,16 @@ export default function Contact() {
                                     key={label}
                                     href={href}
                                     whileHover={{ x: 4 }}
-                                    className="flex items-center gap-4 p-4 rounded-xl transition-colors group"
-                                    style={{
-                                        background: 'var(--bg-secondary)',
-                                        border: '1px solid var(--border)',
-                                    }}
+                                    className="flex items-center gap-4 p-4 rounded-xl transition-colors group bg-(--bg-secondary) border border-(--border)"
                                 >
-                                    <div
-                                        className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
-                                        style={{
-                                            background: 'var(--accent-muted)',
-                                            color: 'var(--accent)',
-                                        }}
-                                    >
+                                    <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 bg-(--accent-muted) text-(--accent)">
                                         {isLucide ? <Icon size={18} /> : <Icon />}
                                     </div>
                                     <div>
-                                        <div
-                                            className="text-xs font-mono"
-                                            style={{ color: 'var(--text-muted)' }}
-                                        >
+                                        <div className="text-xs font-mono text-(--text-muted)">
                                             {label}
                                         </div>
-                                        <div
-                                            className="text-sm font-medium"
-                                            style={{ color: 'var(--text-primary)' }}
-                                        >
+                                        <div className="text-sm font-medium text-(--text-primary)">
                                             {value}
                                         </div>
                                     </div>
@@ -184,11 +153,7 @@ export default function Contact() {
                     >
                         <form
                             onSubmit={handleSubmit}
-                            className="p-8 rounded-2xl space-y-5"
-                            style={{
-                                background: 'var(--bg-secondary)',
-                                border: '1px solid var(--border)',
-                            }}
+                            className="p-8 rounded-2xl space-y-5 bg-(--bg-secondary) border-(--border) border"
                         >
                             <p className="text-(--text-secondary) mb-8">
                                 I am always open to discussing development projects or collaboration
@@ -197,10 +162,7 @@ export default function Contact() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
-                                    <label
-                                        className="block text-xs font-mono mb-2"
-                                        style={{ color: 'var(--text-muted)' }}
-                                    >
+                                    <label className="block text-xs font-mono mb-2 text-(--text-muted)">
                                         Name *
                                     </label>
                                     <input
@@ -220,10 +182,7 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div>
-                                    <label
-                                        className="block text-xs font-mono mb-2"
-                                        style={{ color: 'var(--text-muted)' }}
-                                    >
+                                    <label className="block text-xs font-mono mb-2 text-(--text-muted)">
                                         Email *
                                     </label>
                                     <input
@@ -247,10 +206,7 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label
-                                    className="block text-xs font-mono mb-2"
-                                    style={{ color: 'var(--text-muted)' }}
-                                >
+                                <label className="block text-xs font-mono mb-2 text-(--text-muted)">
                                     Location *
                                 </label>
                                 <input
@@ -267,10 +223,7 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label
-                                    className="block text-xs font-mono mb-2"
-                                    style={{ color: 'var(--text-muted)' }}
-                                >
+                                <label className="block text-xs font-mono mb-2 text-(--text-muted)">
                                     Subject *
                                 </label>
                                 <input
@@ -287,10 +240,7 @@ export default function Contact() {
                             </div>
 
                             <div>
-                                <label
-                                    className="block text-xs font-mono mb-2"
-                                    style={{ color: 'var(--text-muted)' }}
-                                >
+                                <label className="block text-xs font-mono mb-2 text-(--text-muted)">
                                     Message *
                                 </label>
                                 <textarea
@@ -311,10 +261,9 @@ export default function Contact() {
                                 disabled={sending || sent}
                                 whileHover={!sending && !sent ? { scale: 1.02 } : {}}
                                 whileTap={!sending && !sent ? { scale: 0.98 } : {}}
-                                className="w-full py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-200"
+                                className="w-full py-3 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition-all duration-200 text-white"
                                 style={{
                                     background: sent ? 'var(--green)' : 'var(--accent)',
-                                    color: '#fff',
                                     opacity: sending ? 0.8 : 1,
                                 }}
                             >

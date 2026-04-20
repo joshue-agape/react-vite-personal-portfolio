@@ -27,7 +27,7 @@ export default function Skills() {
     const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
     return (
         <section id="skills" className="py-28 relative">
-            <div className="absolute inset-0" style={{ background: 'var(--bg-primary)' }} />
+            <div className="absolute inset-0 bg-(--bg-primary)" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
@@ -39,16 +39,10 @@ export default function Skills() {
                     className="text-center mb-16"
                 >
                     <div className="section-label justify-center mb-4">Skills</div>
-                    <h2
-                        className="text-4xl sm:text-5xl font-extrabold"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-(--text-primary)">
                         Technical <span className="text-gradient">Stack</span>
                     </h2>
-                    <p
-                        className="mt-4 text-base max-w-xl mx-auto"
-                        style={{ color: 'var(--text-secondary)' }}
-                    >
+                    <p className="mt-4 text-base max-w-xl mx-auto text-(--text-secondary)">
                         A clear summary of my technical expertise and the tools I master.
                     </p>
                 </motion.div>
@@ -94,10 +88,8 @@ export default function Skills() {
                                 }}
                                 className="group relative px-0 md:px-10 py-5 mb-15"
                             >
-                                {/* subtle background glow */}
                                 <div className="absolute inset-0 rounded-2xl opacity-40 dark:opacity-20 bg-linear-to-b from-blue-500/5 via-transparent to-purple-500/5" />
 
-                                {/* HEADER */}
                                 <header className="relative text-center mb-10">
                                     <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white">
                                         {category.title}
@@ -108,7 +100,6 @@ export default function Skills() {
                                     </p>
                                 </header>
 
-                                {/* TECH GRID */}
                                 <div className="relative grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
                                     {category.techs.map((tech) => (
                                         <div
@@ -129,7 +120,7 @@ export default function Skills() {
 
                                             <div className="relative w-full h-2 rounded-full bg-neutral-100 dark:bg-neutral-800 overflow-hidden">
                                                 <div
-                                                    className="h-full rounded-full bg-linear-to-r from-blue-500 via-indigo-500 to-emerald-500 transition-all duration-700 ease-out"
+                                                    className="h-full rounded-full bg-linear-to-r from-gray-500 to-white transition-all duration-700 ease-out"
                                                     style={{ width: `${tech.value}%` }}
                                                 />
                                             </div>
@@ -148,9 +139,7 @@ export default function Skills() {
                     transition={{ duration: 0.6, delay: 0.6, ease: 'easeOut' }}
                     className="mt-16 text-center"
                 >
-                    <p className="text-sm font-mono mb-6" style={{ color: 'var(--text-muted)' }}>
-                        // Soft Skills
-                    </p>
+                    <p className="text-sm font-mono mb-6 text-(--text-muted)">// Soft Skills</p>
                     <div className="flex flex-wrap justify-center gap-2">
                         {[
                             'Problem Solving',

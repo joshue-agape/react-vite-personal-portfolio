@@ -20,7 +20,7 @@ export default function Hero() {
     return (
         <section
             id="hero"
-            className="relative min-h-screen flex items-center justify-center overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pb-10"
         >
             {/* Gradient bg */}
             <div className="absolute inset-0 mesh-gradient" />
@@ -61,21 +61,11 @@ export default function Hero() {
                             variants={staggerItem}
                             className="flex items-center gap-3 mb-6 flex-wrap"
                         >
-                            <span
-                                className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-medium border"
-                                style={{
-                                    background: 'var(--green-muted)',
-                                    borderColor: 'var(--green)',
-                                    color: 'var(--green)',
-                                }}
-                            >
+                            <span className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono font-medium border bg-(--green-muted) border-(--green) text-(--green)">
                                 <span className="w-2 h-2 rounded-full bg-current animate-pulse" />
                                 {personalInfo.availability}
                             </span>
-                            <span
-                                className="flex items-center gap-1 text-xs"
-                                style={{ color: 'var(--text-muted)' }}
-                            >
+                            <span className="flex items-center gap-1 text-xs text-(--text-muted)">
                                 <MapPin size={12} />
                                 {personalInfo.location}
                             </span>
@@ -84,8 +74,7 @@ export default function Hero() {
                         {/* Name */}
                         <motion.h1
                             variants={staggerItem}
-                            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-4"
-                            style={{ color: 'var(--text-primary)' }}
+                            className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-4 text-(--text-primary)"
                         >
                             {personalInfo.name.split(' ')[0]}{' '}
                             <span className="text-gradient">{personalInfo.name.split(' ')[1]}</span>
@@ -94,24 +83,23 @@ export default function Hero() {
                         {/* Animated role */}
                         <motion.div
                             variants={staggerItem}
-                            className="text-xl sm:text-2xl font-mono font-semibold mb-6 h-9"
-                            style={{ color: 'var(--accent)' }}
+                            className="text-xl sm:text-2xl font-mono font-semibold mb-6 h-9 text-(--accent)"
                         >
                             <TypeAnimation
                                 sequence={[
-                                    'Frontend Developer 💻',
+                                    'Frontend Developer',
                                     2000,
-                                    'DevOps Engineer ☁️',
+                                    'DevOps Engineer',
                                     2000,
-                                    'Backend Developer 🛠️',
+                                    'Backend Developer',
                                     2000,
-                                    'Cloud & Ops Engineer 🚀',
+                                    'Cloud & Ops Engineer',
                                     2000,
-                                    'Full Stack Developer 💡',
+                                    'Full Stack Developer',
                                     2000,
-                                    'Mobile Developer 📱',
+                                    'Mobile Developer',
                                     2000,
-                                    'Data Analyst 📈',
+                                    'Data Analyst',
                                     2000,
                                 ]}
                                 wrapper="span"
@@ -123,8 +111,7 @@ export default function Hero() {
                         {/* Tagline */}
                         <motion.p
                             variants={staggerItem}
-                            className="text-lg leading-relaxed mb-8 max-w-xl"
-                            style={{ color: 'var(--text-secondary)' }}
+                            className="text-lg leading-relaxed mb-8 max-w-xl text-(--text-secondary)"
                         >
                             {personalInfo.tagline}
                         </motion.p>
@@ -153,10 +140,7 @@ export default function Hero() {
 
                         {/* Social links */}
                         <motion.div variants={staggerItem} className="flex items-center gap-4">
-                            <span
-                                className="text-xs font-mono"
-                                style={{ color: 'var(--text-muted)' }}
-                            >
+                            <span className="text-xs font-mono text-(--text-muted)">
                                 — Find me on
                             </span>
                             {[
@@ -174,12 +158,7 @@ export default function Hero() {
                                     rel="noopener noreferrer"
                                     whileHover={{ scale: 1.2, y: -2 }}
                                     whileTap={{ scale: 0.9 }}
-                                    className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
-                                    style={{
-                                        background: 'var(--bg-secondary)',
-                                        border: '1px solid var(--border)',
-                                        color: 'var(--text-secondary)',
-                                    }}
+                                    className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors bg-(--bg-secondary) border border-(--border) text-(--text-secondary)"
                                     title={label}
                                 >
                                     <Icon />
@@ -189,12 +168,7 @@ export default function Hero() {
                                 href={`mailto:${personalInfo.email}`}
                                 whileHover={{ scale: 1.2, y: -2 }}
                                 whileTap={{ scale: 0.9 }}
-                                className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors"
-                                style={{
-                                    background: 'var(--bg-secondary)',
-                                    border: '1px solid var(--border)',
-                                    color: 'var(--text-secondary)',
-                                }}
+                                className="w-9 h-9 rounded-lg flex items-center justify-center transition-colors bg-(--bg-secondary) border border-(--border) text-(--text-secondary)"
                             >
                                 <Mail size={16} />
                             </motion.a>
@@ -203,8 +177,7 @@ export default function Hero() {
                         {/* Stats */}
                         <motion.div
                             variants={staggerItem}
-                            className="grid grid-cols-4 gap-4 mt-12 mb-35 xl:mb-0 pt-8 border-t"
-                            style={{ borderColor: 'var(--border)' }}
+                            className="grid grid-cols-4 gap-4 mt-12 mb-35 xl:mb-10 py-8 border-t border-(--border)"
                         >
                             {personalInfo.stats.map((stat, i) => (
                                 <motion.div
@@ -214,16 +187,10 @@ export default function Hero() {
                                     transition={{ delay: 0.8 + i * 0.1, duration: 0.5 }}
                                     className="text-center"
                                 >
-                                    <div
-                                        className="text-2xl font-extrabold font-mono"
-                                        style={{ color: 'var(--accent)' }}
-                                    >
+                                    <div className="text-2xl font-extrabold font-mono text-(--accent)">
                                         {stat.value}
                                     </div>
-                                    <div
-                                        className="text-xs mt-0.5 leading-tight"
-                                        style={{ color: 'var(--text-muted)' }}
-                                    >
+                                    <div className="text-xs mt-0.5 leading-tight text-(--text-muted)">
                                         {stat.label}
                                     </div>
                                 </motion.div>
@@ -243,21 +210,19 @@ export default function Hero() {
                             <motion.div
                                 animate={{ rotate: 360 }}
                                 transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
-                                className="absolute -inset-5.5 rounded-full"
+                                className="absolute -inset-5.5 rounded-full opacity-[0.35]"
                                 style={{
                                     background:
                                         'conic-gradient(from 0deg, var(--accent), var(--purple), transparent 60%, var(--accent))',
-                                    opacity: 0.35,
                                 }}
                             />
                             <motion.div
                                 animate={{ rotate: -360 }}
                                 transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
-                                className="absolute -inset-2.5 rounded-full"
+                                className="absolute -inset-2.5 rounded-full opacity-[0.2]"
                                 style={{
                                     background:
                                         'conic-gradient(from 180deg, transparent 50%, var(--purple))',
-                                    opacity: 0.2,
                                 }}
                             />
 
@@ -265,9 +230,8 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -8, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                                className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden"
+                                className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-3 border-(--accent)"
                                 style={{
-                                    border: '3px solid var(--accent)',
                                     boxShadow:
                                         '0 0 40px var(--accent-subtle), 0 20px 60px rgba(0,0,0,0.25)',
                                 }}
@@ -297,12 +261,9 @@ export default function Hero() {
                                         ease: 'easeInOut',
                                         delay: i * 0.6,
                                     }}
-                                    className={`${badge.pos} px-3 py-2 rounded-xl text-xs font-mono font-bold`}
+                                    className={`${badge.pos} px-3 py-2 rounded-xl text-xs font-mono font-bold bg-(--bg-card) border border-(--border) shadow-(--shadow-md)`}
                                     style={{
-                                        background: 'var(--bg-card)',
-                                        border: '1px solid var(--border)',
                                         color: badge.color,
-                                        boxShadow: 'var(--shadow-md)',
                                     }}
                                 >
                                     {badge.text}
@@ -317,15 +278,13 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 1.5 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+                    className="absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
                 >
-                    <span className="text-xs font-mono" style={{ color: 'var(--text-muted)' }}>
-                        scroll
-                    </span>
+                    <span className="text-xs font-mono text-(--text-muted)">scroll</span>
                     <motion.div
                         animate={{ y: [0, 8, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}
-                        style={{ color: 'var(--text-muted)' }}
+                        className="text-(--text-muted)"
                     >
                         <ArrowDown size={16} />
                     </motion.div>

@@ -18,10 +18,9 @@ export default function About() {
 
     return (
         <section id="about" ref={ref} className="py-28 relative overflow-hidden">
-            <div className="absolute inset-0" style={{ background: 'var(--bg-secondary)' }} />
+            <div className="absolute inset-0 bg-(--bg-secondary)" />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -29,16 +28,12 @@ export default function About() {
                     className="text-center mb-16"
                 >
                     <div className="section-label justify-center mb-4">About Me</div>
-                    <h2
-                        className="text-4xl sm:text-5xl font-extrabold"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-(--text-primary)">
                         Who am <span className="text-gradient">I ?</span>
                     </h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-                    {/* Left — Bio */}
                     <motion.div
                         variants={slideInLeft}
                         initial="hidden"
@@ -48,20 +43,15 @@ export default function About() {
                             {personalInfo.bio.split('\n\n').map((para, i) => (
                                 <p
                                     key={i}
-                                    className="text-base leading-relaxed"
-                                    style={{ color: 'var(--text-secondary)' }}
+                                    className="text-base leading-relaxed text-(--text-secondary)"
                                 >
                                     {para}
                                 </p>
                             ))}
                         </div>
 
-                        {/* Focus areas */}
                         <div className="mt-10">
-                            <p
-                                className="text-sm font-mono font-semibold mb-5"
-                                style={{ color: 'var(--text-muted)' }}
-                            >
+                            <p className="text-sm font-mono font-semibold mb-5 text-(--text-muted)">
                                 // Areas of expertise
                             </p>
                             <motion.div
@@ -75,31 +65,15 @@ export default function About() {
                                         key={label}
                                         variants={staggerItem}
                                         whileHover={{ scale: 1.04, y: -2 }}
-                                        className="p-4 rounded-xl card-hover cursor-default"
-                                        style={{
-                                            background: 'var(--bg-card)',
-                                            border: '1px solid var(--border)',
-                                        }}
+                                        className="p-4 rounded-xl card-hover cursor-default bg-(--bg-card) border border-(--border)"
                                     >
-                                        <div
-                                            className="w-8 h-8 rounded-lg flex items-center justify-center mb-2"
-                                            style={{
-                                                background: 'var(--accent-muted)',
-                                                color: 'var(--accent)',
-                                            }}
-                                        >
+                                        <div className="w-8 h-8 rounded-lg flex items-center justify-center mb-2 bg-(--accent-muted) text-(--accent)">
                                             <Icon size={16} />
                                         </div>
-                                        <div
-                                            className="text-sm font-semibold"
-                                            style={{ color: 'var(--text-primary)' }}
-                                        >
+                                        <div className="text-sm font-semibold text-(--text-primary)">
                                             {label}
                                         </div>
-                                        <div
-                                            className="text-xs mt-0.5 font-mono"
-                                            style={{ color: 'var(--text-muted)' }}
-                                        >
+                                        <div className="text-xs mt-0.5 font-mono text-(--text-muted)">
                                             {desc}
                                         </div>
                                     </motion.div>
@@ -108,86 +82,63 @@ export default function About() {
                         </div>
                     </motion.div>
 
-                    {/* Right — Code snippet */}
                     <motion.div
                         variants={slideInRight}
                         initial="hidden"
                         animate={inView ? 'visible' : 'hidden'}
                     >
-                        <div
-                            className="code-block rounded-xl overflow-hidden shadow-xl"
-                            style={{ boxShadow: 'var(--shadow-xl)' }}
-                        >
-                            {/* Terminal header */}
-                            <div
-                                className="flex items-center gap-2 pb-4 mb-4 border-b"
-                                style={{ borderColor: 'var(--border)' }}
-                            >
-                                <div
-                                    className="w-3 h-3 rounded-full"
-                                    style={{ background: '#ff5f57' }}
-                                />
-                                <div
-                                    className="w-3 h-3 rounded-full"
-                                    style={{ background: '#ffbd2e' }}
-                                />
-                                <div
-                                    className="w-3 h-3 rounded-full"
-                                    style={{ background: '#28ca41' }}
-                                />
-                                <span
-                                    className="ml-3 text-xs"
-                                    style={{ color: 'var(--text-muted)' }}
-                                >
-                                    profile.py
-                                </span>
+                        <div className="code-block rounded-xl overflow-hidden shadow-(--shadow-xl)">
+                            <div className="flex items-center gap-2 pb-4 mb-4 border-b border-(--border)">
+                                <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
+                                <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
+                                <div className="w-3 h-3 rounded-full bg-[#28ca41]" />
+                                <span className="ml-3 text-xs text-(--text-muted)">profile.py</span>
                             </div>
 
-                            {/* Code lines */}
                             <div className="space-y-1 text-sm font-mono">
                                 <div className="code-comment">
-                                    # Joshué Agapé RAHARISON — DevOps Engineer Profile
+                                    # RAHARISON Joshué Agapé — DevOps Engineer Profile
                                 </div>
 
                                 <div className="mt-2">
                                     <span className="code-keyword">class </span>
                                     <span className="code-accent">Engineer</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}>:</span>
+                                    <span className="text-(--text-secondary)">:</span>
                                 </div>
 
                                 <div className="pl-4">
                                     <span className="code-orange">name</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="text-(--text-secondary)"> = </span>
                                     <span className="code-string">"{personalInfo.name}"</span>
                                 </div>
 
                                 <div className="pl-4">
                                     <span className="code-orange">birth_date</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="text-(--text-secondary)"> = </span>
                                     <span className="code-string">"{personalInfo.birth}"</span>
                                 </div>
 
                                 <div className="pl-4">
                                     <span className="code-orange">role</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="text-(--text-secondary)"> = </span>
                                     <span className="code-string">"{personalInfo.role}"</span>
                                 </div>
 
                                 <div className="pl-4">
                                     <span className="code-orange">experience</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}> = </span>
+                                    <span className="text-(--text-secondary)"> = </span>
                                     <span className="code-string">"{personalInfo.experience}"</span>
                                 </div>
 
                                 <div className="pl-4">
                                     <span className="code-orange">languages</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}> = [</span>
+                                    <span className="text-(--text-secondary)"> = [</span>
                                     <span className="code-string">"Malagasy"</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}>, </span>
+                                    <span className="text-(--text-secondary)">, </span>
                                     <span className="code-string">"French"</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}>, </span>
+                                    <span className="text-(--text-secondary)">, </span>
                                     <span className="code-string">"English"</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}>]</span>
+                                    <span className="text-(--text-secondary)">]</span>
                                 </div>
 
                                 <div className="mt-8"></div>
@@ -195,11 +146,11 @@ export default function About() {
                                 <div>
                                     <span className="pl-4 code-keyword">def </span>
                                     <span className="code-accent">find_profile </span>
-                                    <span style={{ color: 'var(--text-secondary)' }}>
+                                    <span className="text-(--text-secondary)">
                                         (self, confidence=
                                     </span>
                                     <span className="code-keyword">True</span>
-                                    <span style={{ color: 'var(--text-secondary)' }}>):</span>
+                                    <span className="text-(--text-secondary)">):</span>
                                 </div>
 
                                 <div className="pl-10">
@@ -238,12 +189,8 @@ export default function About() {
                             </div>
                         </div>
 
-                        {/* Quick stats chips */}
                         <div className="mt-6 flex flex-wrap gap-2">
-                            {[
-                                { emoji: '📍', text: 'Based in Fianarantsoa, Madagascar' },
-                                { emoji: '🌍', text: 'Remote-friendly' },
-                            ].map((chip) => (
+                            {[{ emoji: '🌍', text: 'Remote-friendly' }].map((chip) => (
                                 <motion.span
                                     key={chip.text}
                                     whileHover={{ scale: 1.05, y: -1 }}

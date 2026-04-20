@@ -17,7 +17,7 @@ import AIChat from '@/components/AIChat';
 export default function App() {
     return (
         <ThemeProvider>
-            <main className="relative min-h-screen max-w-[100vw] bg-(--bg-primary) text-(--text-primary)">
+            <main className="relative bg-(--bg-primary) text-(--text-primary)">
                 <ParticleBackground />
                 <CustomCursor />
                 <Navbar />

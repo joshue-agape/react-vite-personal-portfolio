@@ -177,28 +177,16 @@ export default function AIChat() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.85, y: 20 }}
                         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-                        className="fixed bottom-6 right-6 z-50 w-120 max-w-[calc(100vw-2rem)] rounded-2xl overflow-hidden flex flex-col"
-                        style={{
-                            height: '550px',
-                            maxHeight: 'calc(100vh - 6rem)',
-                            background: 'var(--bg-card)',
-                            border: '1px solid var(--border)',
-                            boxShadow: 'var(--shadow-xl)',
-                        }}
+                        className="fixed h-full bottom-4 sm:bottom-3 right-3 sm:right-6 z-50 w-120 max-w-[calc(100vw-2rem)] rounded-2xl overflow-hidden flex flex-col border border-(--bg-card) shadow-(--shadow-xl) bg-(--bg-card) max-h-[calc(100vh-6rem)]"
                     >
-                        {/* Header */}
                         <div
-                            className="flex items-center justify-between px-5 py-4 border-b"
+                            className="flex items-center justify-between px-5 py-4 border-b border-(--border)"
                             style={{
-                                borderColor: 'var(--border)',
                                 background: 'linear-gradient(135deg, var(--accent), var(--purple))',
                             }}
                         >
                             <div className="flex items-center gap-3">
-                                <div
-                                    className="w-9 h-9 rounded-xl flex items-center justify-center"
-                                    style={{ background: 'rgba(255,255,255,0.2)' }}
-                                >
+                                <div className="w-9 h-9 rounded-xl flex items-center justify-center bg-[rgba(255,255,255,0.2)]">
                                     <Sparkles size={18} color="white" />
                                 </div>
                                 <div>
@@ -215,8 +203,7 @@ export default function AIChat() {
                                 onClick={() => setOpen(false)}
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
-                                className="w-7 h-7 rounded-lg flex items-center justify-center"
-                                style={{ background: 'rgba(255,255,255,0.2)', color: 'white' }}
+                                className="w-7 h-7 rounded-lg flex items-center justify-center bg-[rgba(255,255,255,0.2)] text-white"
                             >
                                 <X size={14} />
                             </motion.button>
@@ -260,17 +247,8 @@ export default function AIChat() {
                                             </div>
                                         </div>
                                         {msg.role === 'user' && (
-                                            <div
-                                                className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-1"
-                                                style={{
-                                                    background: 'var(--bg-tertiary)',
-                                                    border: '1px solid var(--border)',
-                                                }}
-                                            >
-                                                <User
-                                                    size={13}
-                                                    style={{ color: 'var(--text-secondary)' }}
-                                                />
+                                            <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-1 bg-(--bg-tertiary) border border-(--border) text-(--text-secondary)">
+                                                <User size={13} />
                                             </div>
                                         )}
                                     </motion.div>
@@ -287,20 +265,20 @@ export default function AIChat() {
                                         className="flex items-center gap-2.5"
                                     >
                                         <div
-                                            className="w-7 h-7 rounded-full flex items-center justify-center"
+                                            className="w-7 h-7 rounded-full flex items-center justify-center text-white"
                                             style={{
                                                 background:
                                                     'linear-gradient(135deg, var(--accent), var(--purple))',
                                             }}
                                         >
-                                            <Bot size={13} color="white" />
+                                            <Bot size={13} />
                                         </div>
+
                                         <div className="chat-message-bot px-4 py-3 flex items-center gap-1.5">
                                             {[0, 1, 2].map((i) => (
                                                 <motion.div
                                                     key={i}
-                                                    className="w-2 h-2 rounded-full"
-                                                    style={{ background: 'var(--text-muted)' }}
+                                                    className="w-2 h-2 rounded-full bg-(--text-muted)"
                                                     animate={{ y: [0, -6, 0] }}
                                                     transition={{
                                                         duration: 0.6,
@@ -319,10 +297,7 @@ export default function AIChat() {
                         {/* Quick replies */}
                         {messages.length <= 1 && (
                             <div className="px-4 pb-2">
-                                <p
-                                    className="text-xs mb-2 font-mono"
-                                    style={{ color: 'var(--text-muted)' }}
-                                >
+                                <p className="text-xs mb-2 font-mono text-(--text-muted)">
                                     Questions rapides :
                                 </p>
                                 <div className="flex flex-wrap gap-1.5">
@@ -332,12 +307,7 @@ export default function AIChat() {
                                             onClick={() => sendMessage(q)}
                                             whileHover={{ scale: 1.03 }}
                                             whileTap={{ scale: 0.97 }}
-                                            className="text-xs px-3 py-1.5 rounded-full transition-colors"
-                                            style={{
-                                                background: 'var(--accent-muted)',
-                                                color: 'var(--accent)',
-                                                border: '1px solid var(--accent)',
-                                            }}
+                                            className="text-xs px-3 py-1.5 rounded-full transition-colors bg-(--accent-muted) text-(--accent) border border-(--accent)"
                                         >
                                             {q}
                                         </motion.button>
@@ -349,23 +319,14 @@ export default function AIChat() {
                         {/* Input */}
                         <form
                             onSubmit={handleSubmit}
-                            className="px-4 py-3 border-t flex items-center gap-2"
-                            style={{
-                                borderColor: 'var(--border)',
-                                background: 'var(--bg-secondary)',
-                            }}
+                            className="px-4 py-3 border-t flex items-center gap-2 border-(--border)"
                         >
                             <input
                                 ref={inputRef}
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder="Posez votre question..."
-                                className="flex-1 px-4 py-2.5 rounded-xl text-sm outline-none"
-                                style={{
-                                    background: 'var(--bg-tertiary)',
-                                    border: '1px solid var(--border)',
-                                    color: 'var(--text-primary)',
-                                }}
+                                className="flex-1 px-4 py-2.5 rounded-xl text-sm outline-none bg-(--bg-tertiary) border border-(--border) text-(--text-primary)"
                                 onFocus={(e) => (e.target.style.borderColor = 'var(--accent)')}
                                 onBlur={(e) => (e.target.style.borderColor = 'var(--border)')}
                             />
@@ -374,13 +335,12 @@ export default function AIChat() {
                                 disabled={!input.trim() || typing}
                                 whileHover={input.trim() ? { scale: 1.1 } : {}}
                                 whileTap={input.trim() ? { scale: 0.9 } : {}}
-                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-all"
+                                className="w-10 h-10 rounded-xl flex items-center justify-center transition-all border border-(--border)"
                                 style={{
                                     background: input.trim()
                                         ? 'linear-gradient(135deg, var(--accent), var(--purple))'
                                         : 'var(--bg-tertiary)',
                                     color: input.trim() ? 'white' : 'var(--text-muted)',
-                                    border: '1px solid var(--border)',
                                 }}
                             >
                                 <Send size={15} />

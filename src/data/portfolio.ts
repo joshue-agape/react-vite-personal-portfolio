@@ -25,17 +25,17 @@ export const personalInfo = {
     ],
     floating_badges: [
         {
-            text: '🐘 PHP',
+            text: 'PHP',
             color: 'var(--accent)',
             pos: 'absolute -right-4 top-8',
         },
         {
-            text: '🐍 Python',
+            text: 'Python',
             color: 'var(--green)',
             pos: 'absolute -left-8 bottom-16',
         },
         {
-            text: '🔷 Flutter Dart',
+            text: 'Flutter Dart',
             color: 'var(--purple)',
             pos: 'absolute -right-12 bottom-10',
         },

@@ -11,14 +11,8 @@ export function TimelineCard({ item }: { item: Timeline }) {
         <motion.div
             whileHover={{ y: -8, scale: 1.02 }}
             transition={{ duration: 0.3 }}
-            className="group rounded-2xl overflow-hidden h-full"
-            style={{
-                background: 'var(--bg-card)',
-                border: '1px solid var(--border)',
-                boxShadow: 'var(--shadow-md)',
-            }}
+            className="group rounded-2xl overflow-hidden h-full bg-(--bg-card) border border-(--border) shadow-(--shadow-md)"
         >
-            {/* Image */}
             <div className="relative h-50 overflow-hidden">
                 <img
                     src={item.image}
@@ -33,7 +27,6 @@ export function TimelineCard({ item }: { item: Timeline }) {
                 </div>
             </div>
 
-            {/* Content */}
             <div className="p-5">
                 <h3 className="text-base text-(--text-primary) font-bold mb-2.5">{item.title}</h3>
 
@@ -64,10 +57,9 @@ export default function Timeline() {
 
     return (
         <section id="experiences" className="py-28 relative">
-            <div className="absolute inset-0" style={{ background: 'var(--bg-primary)' }} />
+            <div className="absolute inset-0 bg-(--bg-primary)" />
 
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
@@ -78,16 +70,10 @@ export default function Timeline() {
                     <div className="section-label justify-center mb-4">
                         My Professional Experience
                     </div>
-                    <h2
-                        className="text-4xl sm:text-5xl font-extrabold"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-(--text-primary)">
                         My <span className="text-gradient">journey</span>
                     </h2>
-                    <p
-                        className="mt-4 text-base max-w-xl mx-auto"
-                        style={{ color: 'var(--text-secondary)' }}
-                    >
+                    <p className="mt-4 text-base max-w-xl mx-auto text-(--text-secondary)">
                         3+ years of growth in software development, from academic foundations to
                         professional expertise.
                     </p>

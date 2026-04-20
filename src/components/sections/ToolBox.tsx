@@ -22,30 +22,26 @@ export default function ToolBox() {
 
     return (
         <section id="services" className="py-28 relative">
-            <div className="absolute inset-0" style={{ background: 'var(--bg-secondary)' }} />
+            <div className="absolute inset-0 bg-(--bg-secondary)" />
 
-            {/* Decorative elements */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div
-                    className="absolute top-20 right-0 w-96 h-96 rounded-full"
+                    className="absolute top-20 right-0 w-96 h-96 rounded-full opacity-[0.5]"
                     style={{
                         background:
                             'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)',
-                        opacity: 0.5,
                     }}
                 />
                 <div
-                    className="absolute bottom-0 left-0 w-80 h-80 rounded-full"
+                    className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-[0.5]"
                     style={{
                         background:
                             'radial-gradient(circle, var(--purple-muted) 0%, transparent 70%)',
-                        opacity: 0.5,
                     }}
                 />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
@@ -54,16 +50,10 @@ export default function ToolBox() {
                     className="text-center mb-16"
                 >
                     <div className="section-label justify-center mb-4">Dev Toolbox</div>
-                    <h2
-                        className="text-4xl sm:text-5xl font-extrabold"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-(--text-primary)">
                         What I <span className="text-gradient">Use & Build</span>
                     </h2>
-                    <p
-                        className="mt-4 text-base max-w-2xl mx-auto"
-                        style={{ color: 'var(--text-secondary)' }}
-                    >
+                    <p className="mt-4 text-base max-w-2xl mx-auto text-(--text-secondary)">
                         A personal toolbox of commands, aliases, and scripts for Git, PowerShell,
                         and other developer tools to boost efficiency and automation.
                     </p>
@@ -84,18 +74,12 @@ export default function ToolBox() {
                                 key={item.title}
                                 variants={staggerItem}
                                 whileHover={{ y: -10, scale: 1.04 }}
-                                className="relative p-6 rounded-2xl overflow-hidden group cursor-default"
-                                style={{
-                                    background: 'var(--bg-card)',
-                                    border: '1px solid var(--border)',
-                                    boxShadow: 'var(--shadow-sm)',
-                                }}
+                                className="relative p-6 rounded-2xl overflow-hidden group cursor-default bg-(--bg-card) border border-(--border) shadow-(--shadow-sm)"
                             >
                                 <div
-                                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                                     style={{
                                         background: `radial-gradient(circle at top left, ${colors.text}14, transparent 65%)`,
-                                        pointerEvents: 'none',
                                     }}
                                 />
 
@@ -111,25 +95,16 @@ export default function ToolBox() {
                                         {item.type}
                                     </span>
 
-                                    <span
-                                        className="text-[11px] font-mono opacity-70"
-                                        style={{ color: 'var(--text-muted)' }}
-                                    >
+                                    <span className="text-[11px] font-mono opacity-70 text-(--text-muted)">
                                         TOOL
                                     </span>
                                 </div>
 
-                                <h3
-                                    className="text-lg font-bold mb-2 tracking-tight"
-                                    style={{ color: 'var(--text-primary)' }}
-                                >
+                                <h3 className="text-lg font-bold mb-2 tracking-tight text-(--text-primary)">
                                     {item.title}
                                 </h3>
 
-                                <p
-                                    className="text-sm leading-relaxed mb-5"
-                                    style={{ color: 'var(--text-secondary)' }}
-                                >
+                                <p className="text-sm leading-relaxed mb-5 text-(--text-secondary)">
                                     {item.description}
                                 </p>
 
@@ -139,22 +114,16 @@ export default function ToolBox() {
                                     rel="noopener noreferrer"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="flex items-center w-29 gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
-                                    style={{
-                                        background: 'var(--bg-tertiary)',
-                                        color: 'var(--text-secondary)',
-                                        border: '1px solid var(--border)',
-                                    }}
+                                    className="flex items-center w-29 gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors bg-(--bg-tertiary) text-(--text-secondary) border border-(--border)"
                                 >
                                     <GithubIcon />
                                     Source code
                                 </motion.a>
 
                                 <div
-                                    className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500"
+                                    className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-500 pointer-events-none"
                                     style={{
                                         background: `linear-gradient(90deg, ${colors.text}, transparent)`,
-                                        pointerEvents: 'none',
                                     }}
                                 />
                             </motion.div>

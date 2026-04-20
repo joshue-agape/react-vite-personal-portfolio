@@ -36,13 +36,12 @@ export default function WorkProcess() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid xl:grid-cols-2 gap-16 xl:gap-32 items-center">
                     {/* LEFT */}
-                    <div className="space-y-6 text-center xl:text-left">
+                    <div className="space-y-6">
                         <motion.h2
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="section-label text-center xl:text-left"
-                            style={{ justifyContent: 'flex-start' }}
+                            className="section-label justify-center lg:justify-start"
                         >
                             Work Process
                         </motion.h2>
@@ -51,7 +50,7 @@ export default function WorkProcess() {
                             initial={{ opacity: 0, x: -25 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-3xl md:text-4xl font-bold"
+                            className="text-3xl md:text-4xl font-bold text-center lg:text-start"
                             style={{ color: 'var(--text-primary)' }}
                         >
                             How I build <span className="text-gradient">systems</span>
@@ -61,7 +60,7 @@ export default function WorkProcess() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-sm md:text-base leading-relaxed"
+                            className="text-sm md:text-base leading-relaxed text-center lg:text-start"
                             style={{ color: 'var(--text-secondary)' }}
                         >
                             I follow a structured engineering process focused on scalability,
@@ -73,7 +72,7 @@ export default function WorkProcess() {
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="text-sm md:text-base leading-relaxed"
+                            className="text-sm md:text-base leading-relaxed text-center lg:text-start"
                             style={{ color: 'var(--text-secondary)' }}
                         >
                             From ideation to production, I ensure every system is reliable,

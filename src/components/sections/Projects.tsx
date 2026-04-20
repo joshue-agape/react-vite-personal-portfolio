@@ -11,14 +11,7 @@ const GithubIcon = () => (
     </svg>
 );
 
-const categories = [
-    'All',
-    'Web Application',
-    'Mobile Application',
-    'Backend Services',
-    'Design',
-    'AI',
-];
+const categories = ['All', 'Web Application', 'Mobile Application', 'Backend Services'];
 
 const colorMap: Record<string, { text: string; bg: string }> = {
     accent: { text: 'var(--accent)', bg: 'var(--accent-muted)' },
@@ -38,9 +31,8 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             onHoverEnd={() => setHovered(false)}
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ duration: 0.25 }}
-            className="relative rounded-2xl overflow-hidden cursor-pointer"
+            className="relative rounded-2xl overflow-hidden cursor-pointer bg-(--bg-card)"
             style={{
-                background: 'var(--bg-card)',
                 border: `1px solid ${hovered ? colors.text : 'var(--border)'}`,
                 boxShadow: hovered
                     ? `0 16px 48px ${colors.text}20, var(--shadow-md)`
@@ -62,33 +54,22 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                                 className="px-2 py-0.5 rounded-full text-xs font-mono font-bold"
                                 style={{ background: colors.bg, color: colors.text }}
                             >
-                                ⭐ Featured
+                                Featured
                             </span>
                         )}
-                        <span
-                            className="px-2 py-0.5 rounded-full text-xs font-mono"
-                            style={{ background: 'var(--bg-tertiary)', color: 'var(--text-muted)' }}
-                        >
+                        <span className="px-2 py-0.5 rounded-full text-xs font-mono bg-(--bg-tertiary) text-(--text-muted)">
                             {project.category}
                         </span>
                     </div>
-                    <div
-                        className="flex items-center gap-1 text-xs font-mono"
-                        style={{ color: 'var(--text-muted)' }}
-                    >
+                    <div className="flex items-center gap-1 text-xs font-mono text-(--text-muted)">
                         <Star size={12} />
                         {project.stars}
                     </div>
                 </div>
 
-                <h3 className="text-lg font-bold mb-2" style={{ color: 'var(--text-primary)' }}>
-                    {project.title}
-                </h3>
+                <h3 className="text-lg font-bold mb-2 text-(--text-primary)">{project.title}</h3>
 
-                <p
-                    className="text-sm leading-relaxed mb-4"
-                    style={{ color: 'var(--text-secondary)' }}
-                >
+                <p className="text-sm leading-relaxed mb-4 text-(--text-secondary)">
                     <AnimatePresence mode="wait">
                         <motion.span
                             key={hovered ? 'long' : 'short'}
@@ -119,34 +100,21 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                     {project.tags.map((tag) => (
                         <span
                             key={tag}
-                            className="px-2 py-0.5 rounded-md text-xs font-mono"
-                            style={{
-                                background: 'var(--bg-tertiary)',
-                                color: 'var(--text-muted)',
-                                border: '1px solid var(--border)',
-                            }}
+                            className="px-2 py-0.5 rounded-md text-xs font-mono border border-(--border) text-(--text-muted) bg-(--bg-tertiary)"
                         >
                             {tag}
                         </span>
                     ))}
                 </div>
 
-                <div
-                    className="flex items-center gap-3 pt-4 border-t"
-                    style={{ borderColor: 'var(--border)' }}
-                >
+                <div className="flex items-center gap-3 pt-4 border-t border-(--border)">
                     <motion.a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors"
-                        style={{
-                            background: 'var(--bg-tertiary)',
-                            color: 'var(--text-secondary)',
-                            border: '1px solid var(--border)',
-                        }}
+                        className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors bg-(--bg-tertiary) text-(--text-secondary) border border-(--border)"
                     >
                         <GithubIcon />
                         GitHub
@@ -185,7 +153,6 @@ export default function Projects() {
             <div className="absolute inset-0" style={{ background: 'var(--bg-secondary)' }} />
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
@@ -194,16 +161,10 @@ export default function Projects() {
                     className="text-center mb-12"
                 >
                     <div className="section-label justify-center mb-4">Projects</div>
-                    <h2
-                        className="text-4xl sm:text-5xl font-extrabold"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-(--text-primary)">
                         My <span className="text-gradient">achievements</span>
                     </h2>
-                    <p
-                        className="mt-4 text-base max-w-xl mx-auto"
-                        style={{ color: 'var(--text-secondary)' }}
-                    >
+                    <p className="mt-4 text-base max-w-xl mx-auto text-(--text-secondary)">
                         A selection of projects showcasing my expertise in web development and
                         modern application design.
                     </p>

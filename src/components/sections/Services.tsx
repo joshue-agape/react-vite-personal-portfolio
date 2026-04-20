@@ -17,30 +17,26 @@ export default function Services() {
 
     return (
         <section id="services" className="py-28 relative">
-            <div className="absolute inset-0" style={{ background: 'var(--bg-secondary)' }} />
+            <div className="absolute inset-0 bg-(--bg-secondary)" />
 
-            {/* Decorative elements */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div
-                    className="absolute top-20 right-0 w-96 h-96 rounded-full"
+                    className="absolute top-20 right-0 w-96 h-96 rounded-full opacity-[0.5]"
                     style={{
                         background:
                             'radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%)',
-                        opacity: 0.5,
                     }}
                 />
                 <div
-                    className="absolute bottom-0 left-0 w-80 h-80 rounded-full"
+                    className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-[0.5]"
                     style={{
                         background:
                             'radial-gradient(circle, var(--purple-muted) 0%, transparent 70%)',
-                        opacity: 0.5,
                     }}
                 />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Header */}
                 <motion.div
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
@@ -49,16 +45,10 @@ export default function Services() {
                     className="text-center mb-16"
                 >
                     <div className="section-label justify-center mb-4">Services</div>
-                    <h2
-                        className="text-4xl sm:text-5xl font-extrabold"
-                        style={{ color: 'var(--text-primary)' }}
-                    >
+                    <h2 className="text-4xl sm:text-5xl font-extrabold text-(--text-primary)">
                         What <span className="text-gradient">I Do?</span>
                     </h2>
-                    <p
-                        className="mt-4 text-base max-w-2xl mx-auto"
-                        style={{ color: 'var(--text-secondary)' }}
-                    >
+                    <p className="mt-4 text-base max-w-2xl mx-auto text-(--text-secondary)">
                         I design and develop high-performance, responsive web and mobile
                         applications, combining intuitive front-end with robust back-end. My work
                         covers the entire project lifecycle, from design to production, ensuring an
@@ -81,12 +71,7 @@ export default function Services() {
                                 variants={staggerItem}
                                 whileHover={{ y: -6, scale: 1.02 }}
                                 transition={{ duration: 0.25 }}
-                                className="relative p-6 rounded-2xl group cursor-default overflow-hidden"
-                                style={{
-                                    background: 'var(--bg-card)',
-                                    border: '1px solid var(--border)',
-                                    boxShadow: 'var(--shadow-sm)',
-                                }}
+                                className="relative p-6 rounded-2xl group cursor-default overflow-hidden bg-(--bg-card) border border-(--border) shadow-(--shadow-sm)"
                             >
                                 {/* Hover glow */}
                                 <div
@@ -106,18 +91,12 @@ export default function Services() {
                                 </motion.div>
 
                                 {/* Title */}
-                                <h3
-                                    className="text-lg font-bold mb-3"
-                                    style={{ color: 'var(--text-primary)' }}
-                                >
+                                <h3 className="text-lg font-bold mb-3 text-(--text-primary)">
                                     {service.title}
                                 </h3>
 
                                 {/* Description */}
-                                <p
-                                    className="text-sm leading-relaxed mb-5"
-                                    style={{ color: 'var(--text-secondary)' }}
-                                >
+                                <p className="text-sm leading-relaxed mb-5 text-(--text-secondary)">
                                     {service.description}
                                 </p>
 
@@ -130,10 +109,7 @@ export default function Services() {
                                                 className="mt-0.5 shrink-0"
                                                 style={{ color: colors.text }}
                                             />
-                                            <span
-                                                className="text-sm"
-                                                style={{ color: 'var(--text-secondary)' }}
-                                            >
+                                            <span className="text-sm text-(--text-secondary)">
                                                 {feat}
                                             </span>
                                         </div>
@@ -159,15 +135,12 @@ export default function Services() {
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="mt-16 text-center"
                 >
-                    <div
-                        className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl"
-                        style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
-                    >
+                    <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 rounded-2xl bg-(--bg-card) border border-(--border)">
                         <div className="text-left">
-                            <div className="font-bold" style={{ color: 'var(--text-primary)' }}>
+                            <div className="font-bold text-(--text-primary)">
                                 Besoin d'un DevOps pour votre projet ?
                             </div>
-                            <div className="text-sm" style={{ color: 'var(--text-secondary)' }}>
+                            <div className="text-sm text-(--text-secondary)">
                                 Discutons de vos besoins en infrastructure.
                             </div>
                         </div>
