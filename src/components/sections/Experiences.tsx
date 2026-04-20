@@ -34,7 +34,7 @@ export function TimelineCard({ experience }: { experience: Experience }) {
 
                 <p className="text-sm text-(--accent) mb-2">{experience.company}</p>
 
-                <p className="text-sm leading-relaxed text-(--text-secondary) mb-4 line-clamp-3">
+                <p className="text-sm leading-relaxed text-(--text-secondary) mb-4 line-clamp-7">
                     {experience.description}
                 </p>
 

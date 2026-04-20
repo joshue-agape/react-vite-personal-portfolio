@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
         company: 'ENI',
         location: 'Fianarantsoa 301, Madagascar',
         description:
-            'Design and development of a complete solution ensuring reliability and performance. Implementation of a dynamic interface to visualize analyzed emails and integration of data processed by n8n workflows with filtering and organization.',
+            "I created and implemented a comprehensive automation system for email analysis that leverages AI and n8n workflows. An interactive interface was built to visualize the processed emails, which facilitates effective filtering, organization, and provides real-time insights into the data.",
         tags: ['React.js', 'PostgreSQL', 'Flask', 'N8N', 'Docker'],
         image: '/experiences/n8n-autoflow.png',
     },
@@ -28,7 +28,7 @@ export const experiences: Experience[] = [
         company: 'RafalTech, Antananarivo',
         location: 'Full Remote',
         description:
-            'Full development of the application including image capture and enhancement. Creation of visualization, editing, and data export interfaces, and implementation of an adaptable OCR engine to extract information according to specifications.',
+            'I developed a mobile application that includes features for capturing and enhancing images. Additionally, I incorporated OCR technology for data extraction, along with user interfaces that allow for visualization, editing, and structured data export.',
         tags: ['Flutter', 'Django', 'PostgreSQL', 'Tesseract OCR', 'Hugging Face'],
         image: '/experiences/flutter-django.png',
     },
@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
         company: 'SfyriTech - Start Up',
         location: 'Antananarivo, Madagascar',
         description:
-            'Design and development of an appointment management application synchronized with Google Calendar. Implementation of a RESTful and WebSocket API for real-time communication and front-end and back-end development for a smooth and responsive user interface.',
+            'I designed and constructed a scheduling application that works seamlessly with Gogle Calendar. To ensure real-time updates and a smoth user experience throughout the platform, I developed both RESTful and WebSocket APIs.',
         tags: ['Quasar', 'PostgreSQL', 'Nest.js', 'Prisma ORM', 'Google Calendar API'],
         image: '/experiences/nest-vue.webp',
     },
@@ -50,8 +50,8 @@ export const experiences: Experience[] = [
         company: 'SfyriTech - Start Up',
         location: 'Full Remote',
         description:
-            'Optimization of existing code to improve performance and usability. Development of new features according to client requirements and bug fixes to enhance the user experience.',
-        tags: ['Node.js', 'Express', 'Docker', 'websocket'],
+            'I improved backend performance by refining the existing code and addressing critical issues. Furthermore, I created new API features tailored to client requirements, which enhanced usability, scalability, and the overall reliability of the system.',
+        tags: ['Node.js', 'Express', 'Sequelize ORM', 'Docker', 'websocket'],
         image: '/experiences/node-express.jpg',
     },
     {
@@ -61,8 +61,8 @@ export const experiences: Experience[] = [
         company: 'Open Data / Open Delivery',
         location: 'Antsirabe, Madagascar',
         description:
-            'Design and development of front-end and back-end aspects of websites and web applications. Implementation of software solutions tailored to client needs and development of custom features according to specifications.',
-        tags: ['vue.js', 'PHP', 'Laravel', 'jQuery', 'MySQL'],
+            'Contributed to the full-stack development of an order and delivery management system. Implemented custom features and scalable solutions tailored to client requirements, improving operational efficiency.',
+        tags: ['Vue.js', 'PHP', 'Laravel', 'jQuery', 'MySQL'],
         image: '/experiences/laravel.png',
     },
 ];

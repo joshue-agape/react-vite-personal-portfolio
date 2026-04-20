@@ -83,18 +83,20 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                     </AnimatePresence>
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {project.metrics.map((m) => (
-                        <span
-                            key={m}
-                            className="flex items-center gap-1 text-xs font-mono px-2 py-1 rounded-md"
-                            style={{ background: colors.bg, color: colors.text }}
-                        >
-                            <Layers size={10} />
-                            {m}
-                        </span>
-                    ))}
-                </div>
+                {project.metrics.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {project.metrics.map((m) => (
+                            <span
+                                key={m}
+                                className="flex items-center gap-1 text-xs font-mono px-2 py-1 rounded-md"
+                                style={{ background: colors.bg, color: colors.text }}
+                            >
+                                <Layers size={10} />
+                                {m}
+                            </span>
+                        ))}
+                    </div>
+                )}
 
                 <div className="flex flex-wrap gap-1.5 mb-5">
                     {project.tags.map((tag) => (

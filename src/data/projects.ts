@@ -13,6 +13,19 @@ export type Project = {
 
 export const projects: Project[] = [
     {
+        title: 'My Portfolio V1.0',
+        description:
+            'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
+        tags: ['Vue', 'PrimeVue', 'Tailwindcss', 'FastAPI'],
+        category: 'Application Web',
+        github: '#',
+        demo: '#',
+        stars: 142,
+        featured: true,
+        metrics: [],
+        color: 'orange',
+    },
+    {
         title: 'StockFlow',
         description:
             'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
@@ -22,7 +35,7 @@ export const projects: Project[] = [
         demo: '#',
         stars: 142,
         featured: true,
-        metrics: ['test', 'asdadasd'],
+        metrics: [],
         color: 'accent',
     },
     {
@@ -35,7 +48,7 @@ export const projects: Project[] = [
         demo: '#',
         stars: 89,
         featured: true,
-        metrics: [''],
+        metrics: [],
         color: 'green',
     },
     {
@@ -48,7 +61,7 @@ export const projects: Project[] = [
         demo: '#',
         stars: 234,
         featured: true,
-        metrics: [''],
+        metrics: [],
         color: 'purple',
     },
     {
@@ -61,7 +74,7 @@ export const projects: Project[] = [
         demo: '#',
         stars: 178,
         featured: true,
-        metrics: [''],
+        metrics: [],
         color: 'orange',
     },
     {
@@ -74,7 +87,7 @@ export const projects: Project[] = [
         demo: '#',
         stars: 67,
         featured: true,
-        metrics: [''],
+        metrics: [],
         color: 'accent',
     },
     {
@@ -87,8 +100,21 @@ export const projects: Project[] = [
         demo: '#',
         stars: 95,
         featured: true,
-        metrics: [''],
+        metrics: [],
         color: 'green',
+    },
+    {
+        title: 'My Portfolio V2.0',
+        description:
+            'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
+        tags: ['React', 'Tailwindcss'],
+        category: 'Application Web',
+        github: '#',
+        demo: '#',
+        stars: 142,
+        featured: true,
+        metrics: [],
+        color: 'accent',
     },
 ];
 
@@ -103,8 +129,15 @@ export type ToolBox = {
 export const toolbox: ToolBox[] = [
     {
         source: 'https://github.com/joshue-agape/ps-git-aliases',
-        title: 'Git',
+        title: 'Git CLI',
         description: 'Predefined Git aliases to speed up common version control workflows.',
+        color: 'purple',
+        type: 'Alias PowerShell Windows',
+    },
+    {
+        source: 'https://github.com/joshue-agape/ps-docker-aliases',
+        title: 'Docker CLI',
+        description: 'Predefined Docker aliases to speed up common version control workflows.',
         color: 'accent',
         type: 'Alias PowerShell Windows',
     },
