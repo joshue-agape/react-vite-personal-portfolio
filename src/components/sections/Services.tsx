@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { services } from '@/data/portfolio';
+import { services } from '@/data/services';
 import { CheckCircle2 } from 'lucide-react';
 import { staggerContainer, staggerItem } from '@/utils/animations';
 
@@ -87,7 +87,7 @@ export default function Services() {
                                     className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5"
                                     style={{ background: colors.bg }}
                                 >
-                                    {service.icon}
+                                    <service.icon />
                                 </motion.div>
 
                                 {/* Title */}

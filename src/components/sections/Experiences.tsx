@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { timeline, type Timeline } from '@/data/portfolio';
+import { experiences, type Experience } from '@/data/experiences';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-export function TimelineCard({ item }: { item: Timeline }) {
+export function TimelineCard({ experience }: { experience: Experience }) {
     return (
         <motion.div
             whileHover={{ y: -8, scale: 1.02 }}
@@ -15,30 +15,30 @@ export function TimelineCard({ item }: { item: Timeline }) {
         >
             <div className="relative h-50 overflow-hidden">
                 <img
-                    src={item.image}
-                    alt={item.title}
+                    src={experience.image}
+                    alt={experience.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
 
                 <div className="absolute bottom-3 left-3 text-xs font-mono text-white/80">
-                    {item.year}
+                    {experience.year}
                 </div>
             </div>
 
             <div className="p-5">
-                <h3 className="text-base text-(--text-primary) font-bold mb-2.5">{item.title}</h3>
+                <h3 className="text-base text-(--text-primary) font-bold mb-2.5">{experience.title}</h3>
 
-                <p className="text-sm text-(--accent) mb-2">{item.company}</p>
+                <p className="text-sm text-(--accent) mb-2">{experience.company}</p>
 
                 <p className="text-sm leading-relaxed text-(--text-secondary) mb-4 line-clamp-3">
-                    {item.description}
+                    {experience.description}
                 </p>
 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                    {item.tags.map((tag: string) => (
+                    {experience.tags.map((tag: string) => (
                         <span
                             key={tag}
                             className="px-2 py-1 text-xs rounded-md bg-(--bg-tertiary) text-(--text-muted) border border-(--border)"
@@ -93,9 +93,9 @@ export default function Timeline() {
                         paddingBottom: '50px',
                     }}
                 >
-                    {timeline.map((item, i) => (
-                        <SwiperSlide key={i}>
-                            <TimelineCard item={item} />
+                    {experiences.map((experience, index) => (
+                        <SwiperSlide key={index}>
+                            <TimelineCard experience={experience} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

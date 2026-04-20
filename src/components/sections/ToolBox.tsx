@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { toolbox } from '@/data/portfolio';
+import { toolbox } from '@/data/projects';
 import { staggerContainer, staggerItem } from '@/utils/animations';
 
 const colorMap: Record<string, { text: string; bg: string; border: string }> = {

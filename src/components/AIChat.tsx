@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, X, Send, Bot, User, Sparkles } from 'lucide-react';
-import { aiKnowledge } from '@/data/portfolio';
+import { aiKnowledge } from '@/data/AIKnowledge';
 import { v4 as uuidv4 } from 'uuid';
 
 interface Message {

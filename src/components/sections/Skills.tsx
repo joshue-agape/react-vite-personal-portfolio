@@ -1,11 +1,11 @@
+import 'swiper/css';
+import 'swiper/css/pagination';
 import { type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { frameworks, skills } from '@/data/portfolio';
+import { frameworks, skills } from '@/data/skills';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 
 type MarqueeProps = {
     children: ReactNode;

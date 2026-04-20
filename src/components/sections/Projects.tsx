@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { projects } from '@/data/portfolio';
+import { projects } from '@/data/projects';
 import { Star, ExternalLink, GitBranch, Layers } from 'lucide-react';
 import { staggerContainer, staggerItem } from '../../utils/animations';
 
@@ -72,13 +72,13 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                 <p className="text-sm leading-relaxed mb-4 text-(--text-secondary)">
                     <AnimatePresence mode="wait">
                         <motion.span
-                            key={hovered ? 'long' : 'short'}
+                            key="short"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.2 }}
                         >
-                            {hovered ? project.longDescription : project.description}
+                            {project.description}
                         </motion.span>
                     </AnimatePresence>
                 </p>
@@ -210,8 +210,8 @@ export default function Projects() {
                         exit={{ opacity: 0, scale: 0.95 }}
                         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-start"
                     >
-                        {filtered.map((project) => (
-                            <ProjectCard key={project.id} project={project} />
+                        {filtered.map((project, index) => (
+                            <ProjectCard key={index} project={project} />
                         ))}
                     </motion.div>
                 </AnimatePresence>
