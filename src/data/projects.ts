@@ -9,7 +9,7 @@ export type Project = {
     featured: boolean;
     metrics: string[];
     color: string;
-}
+};
 
 export const projects: Project[] = [
     {
@@ -22,7 +22,7 @@ export const projects: Project[] = [
         demo: '#',
         stars: 142,
         featured: true,
-        metrics: ['test' , 'asdadasd'],
+        metrics: ['test', 'asdadasd'],
         color: 'accent',
     },
     {
@@ -98,7 +98,7 @@ export type ToolBox = {
     description: string;
     color: string;
     type: string;
-}
+};
 
 export const toolbox: ToolBox[] = [
     {

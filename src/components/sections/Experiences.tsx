@@ -28,7 +28,9 @@ export function TimelineCard({ experience }: { experience: Experience }) {
             </div>
 
             <div className="p-5">
-                <h3 className="text-base text-(--text-primary) font-bold mb-2.5">{experience.title}</h3>
+                <h3 className="text-base text-(--text-primary) font-bold mb-2.5">
+                    {experience.title}
+                </h3>
 
                 <p className="text-sm text-(--accent) mb-2">{experience.company}</p>
 

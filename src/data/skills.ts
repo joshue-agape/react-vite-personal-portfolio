@@ -55,7 +55,7 @@ export const skills: Skill[] = [
 export type Framework = {
     name: string;
     icon: string;
-}
+};
 
 export const frameworks: Framework[] = [
     { name: 'IA N8N', icon: '/techs/n8n.png' },

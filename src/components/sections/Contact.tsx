@@ -21,13 +21,13 @@ const contactLinks = [
         icon: GithubIcon,
         label: 'GitHub',
         value: 'joshue-agape',
-        href: 'https://github.com/joshue-agape',
+        href: personalInfo.github,
     },
     {
         icon: LinkedinIcon,
         label: 'LinkedIn',
         value: 'Raharison Joshué Agapé',
-        href: 'https://linkedin.com/in/joshue-agape-devops',
+        href: personalInfo.linkedin,
     },
     {
         icon: Mail,
@@ -40,7 +40,7 @@ const contactLinks = [
         icon: MapPin,
         label: 'Location',
         value: 'Fianarantsoa 301, Madagascar',
-        href: 'https://www.google.com/maps/place//@-21.4227759,47.1116422,150m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D',
+        href: personalInfo.map,
         isLucide: true,
     },
 ];

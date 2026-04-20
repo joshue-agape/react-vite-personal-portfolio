@@ -14,7 +14,8 @@ export const personalInfo = {
     location: 'Fianarantsoa 301, Madagascar',
     email: 'agapedev.dark@gmail.com',
     github: 'https://github.com/joshue-agape',
-    linkedin: 'https://l.facebook.com/l.php?u=https%3A%2F%2Flinkedin.com%2Fin%2Fraharison-joshu%2525C3%2525A9-agap%2525C3%2525A9-14600129a%253Futm_source%253Dshare%2526utm_campaign%253Dshare_via%2526utm_content%253Dprofile%2526utm_medium%253Dandroid_app%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExOE9OU01PVVhhZDdJdmlKdXNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR56zP_NhbAtNUPxjjObwQuMyIJLxtCSp8mGt5zsVGReRdAJ_R8Q_qbAsP-o5w_aem_nHh42i6RQnnYDlYSJdJsDQ&h=AT5WMh5alU18bbuvjV7W0fUE-OdoMSZYy5pDS3Bn4DRCR-BodCOn6DKy_vTH4CEXrcoboundKL1aP23ZtcsWcS1EOf8Yc9mQq11nreEkAwcRrSdURRkASXRtDO1V0neIAzj1',
+    linkedin: 'https://www.linkedin.com/in/j%C3%B8sh%C3%BC%C4%99-%C3%A5g%C3%A4p%C4%97-6ba810404/',
+    map: 'https://www.google.com/maps/place//@-21.4227759,47.1116422,150m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D',
     availability: 'Open to opportunities',
     bio: bio,
     stats: [

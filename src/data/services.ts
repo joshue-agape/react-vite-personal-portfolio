@@ -1,4 +1,12 @@
-import { Globe2, Palette, PencilRuler, Server, Smartphone, Webhook, type LucideIcon } from "lucide-react";
+import {
+    Globe2,
+    Palette,
+    PencilRuler,
+    Server,
+    Smartphone,
+    Webhook,
+    type LucideIcon,
+} from 'lucide-react';
 
 export type Service = {
     icon: LucideIcon;
@@ -6,7 +14,7 @@ export type Service = {
     description: string;
     features: string[];
     color: string;
-}
+};
 
 export const services: Service[] = [
     {
