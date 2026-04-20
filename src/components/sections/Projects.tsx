@@ -148,7 +148,7 @@ export default function Projects() {
     const [activeCategory, setActiveCategory] = useState('All');
 
     const filtered =
-        activeCategory === 'All' ? projects : projects.filter((p) => p.category === activeCategory);
+        activeCategory === 'All' ? projects : projects.filter((p) => p.category.startsWith(activeCategory));
 
     return (
         <section id="projects" className="py-28 relative">
