@@ -8,7 +8,7 @@ const colorMap: Record<string, { text: string; bg: string; border: string }> = {
     blue: { text: 'var(--accent)', bg: 'var(--accent-muted)', border: 'var(--accent)' },
     purple: { text: 'var(--purple)', bg: 'var(--purple-muted)', border: 'var(--purple)' },
     green: { text: 'var(--green)', bg: 'var(--green-muted)', border: 'var(--green)' },
-    orange: { text: 'var(--orange)', bg: '#fff7ed', border: 'var(--orange)' },
+    orange: { text: 'var(--orange)', bg: '#f0883e1c', border: 'var(--orange)' },
 };
 
 const GithubIcon = () => (

@@ -16,7 +16,7 @@ export const projects: Project[] = [
         title: 'My Portfolio V1.0',
         description:
             'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
-        tags: ['Vue', 'PrimeVue', 'Tailwindcss', 'FastAPI'],
+        tags: ['Vue.js', 'PrimeVue', 'Tailwindcss', 'FastAPI'],
         category: 'Web Application',
         github: '#',
         demo: '#',
@@ -139,6 +139,20 @@ export const toolbox: ToolBox[] = [
         title: 'Docker CLI',
         description: 'Predefined Docker aliases to speed up common version control workflows.',
         color: 'accent',
+        type: 'Alias PowerShell Windows',
+    },
+    {
+        source: 'https://github.com/joshue-agape/ps-docker-aliases',
+        title: 'Express Project',
+        description: 'Predefined aliases for Express projects to speed up project creation and setup.',
+        color: 'green',
+        type: 'Alias PowerShell Windows',
+    },
+    {
+        source: 'https://github.com/joshue-agape/ps-fastapi-aliases',
+        title: 'FastAPI Project',
+        description: 'Predefined aliases for FastAPI projects to speed up project creation and setup.',
+        color: 'orange',
         type: 'Alias PowerShell Windows',
     },
 ];
