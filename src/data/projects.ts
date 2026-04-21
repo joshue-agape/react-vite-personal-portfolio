@@ -15,7 +15,7 @@ export const projects: Project[] = [
     {
         title: 'My Portfolio V1.0',
         description:
-            'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
+            'A web portfolio showcasing my projects, skills, and experiences through a modern, intuitive interface with smooth navigation and responsive design.',
         tags: ['Vue.js', 'PrimeVue', 'Tailwindcss', 'FastAPI'],
         category: 'Web Application',
         github: '#',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     {
         title: 'Sendora',
         description:
-            'Plateforme permettant de trouver rapidement des médecins spécialistes à proximité, consulter leurs disponibilités et prendre rendez-vous en ligne de manière simple, rapide et pratique.',
+            'A personal portfolio designed to highlight my projects, technical skills, and professional experience, featuring a performant, responsive, and user-focused interface.',
         tags: ['React', 'Material UI', 'FastAPI', 'Tailwindcss', 'PostgreSQL'],
         category: 'Web Application + cloud',
         github: '#',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     {
         title: 'My Portfolio V2.0',
         description:
-            'Outil de gestion d’inventaire permettant de suivre les produits, contrôler les niveaux de stock en temps réel et simplifier les opérations quotidiennes liées à l’organisation des marchandises.',
+            'An interactive personal space dedicated to presenting my work, skills, and journey, with a modern design and seamless user experience.',
         tags: ['React', 'Tailwindcss'],
         category: 'Web Application',
         github: '#',
@@ -142,7 +142,7 @@ export const toolbox: ToolBox[] = [
         type: 'Alias PowerShell Windows',
     },
     {
-        source: 'https://github.com/joshue-agape/ps-docker-aliases',
+        source: 'https://github.com/joshue-agape/ps-express-project-aliases',
         title: 'Express Project',
         description: 'Predefined aliases for Express projects to speed up project creation and setup.',
         color: 'green',

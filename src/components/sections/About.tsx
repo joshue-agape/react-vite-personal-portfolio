@@ -119,18 +119,6 @@ export default function About() {
                                 </div>
 
                                 <div className="pl-4">
-                                    <span className="code-orange">role</span>
-                                    <span className="text-(--text-secondary)"> = </span>
-                                    <span className="code-string">"{personalInfo.role}"</span>
-                                </div>
-
-                                <div className="pl-4">
-                                    <span className="code-orange">experience</span>
-                                    <span className="text-(--text-secondary)"> = </span>
-                                    <span className="code-string">"{personalInfo.experience}"</span>
-                                </div>
-
-                                <div className="pl-4">
                                     <span className="code-orange">languages</span>
                                     <span className="text-(--text-secondary)"> = [</span>
                                     <span className="code-string">"Malagasy"</span>
@@ -145,7 +133,7 @@ export default function About() {
 
                                 <div>
                                     <span className="pl-4 code-keyword">def </span>
-                                    <span className="code-accent">find_profile </span>
+                                    <span className="code-accent">find_educations </span>
                                     <span className="text-(--text-secondary)">
                                         (self, confidence=
                                     </span>
@@ -154,37 +142,36 @@ export default function About() {
                                 </div>
 
                                 <div className="pl-10">
-                                    <span className="code-keyword">return {'{'}</span> <br />
-                                    <span className="text-(--text-secondary) ml-5">
-                                        {' '}
-                                        "name": self.
+                                    <span className="code-keyword">return {'['}</span> <br />
+                                    <span className="text-green-500 ml-5">{'{'}</span> <br />
+                                    <span className="text-(--text-secondary) ml-10">
+                                        "degree" :
                                     </span>
-                                    <span className="code-accent">name</span> <br />
-                                    <span className="text-(--text-secondary) ml-5">
-                                        {' '}
-                                        "birth_date": self.
+                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
+                                        "Professional Bachelor's Degree — Software Engineering & Databases"
+                                    </span><br />
+                                    <span className="text-(--text-secondary) ml-10">
+                                        "institution" :
                                     </span>
-                                    <span className="code-accent">birth_date</span> <br />
-                                    <span className="text-(--text-secondary) ml-5">
-                                        {' '}
-                                        "role": self.
+                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
+                                        "University of Fianarantsoa · National School of Computer Science"
+                                    </span><br />
+                                    <span className="text-green-500 ml-5">{'},'}</span> <br />
+                                    <span className="text-green-500 ml-5">{'{'}</span> <br />
+                                    <span className="text-(--text-secondary) ml-10">
+                                        "degree" :
                                     </span>
-                                    <span className="code-accent">role</span> <br />
-                                    <span className="code-keyword">{'}'}</span> <br />
-                                </div>
-
-                                <div className="mt-3 pl-4">
-                                    <span className="code-comment">
-                                        # SLO: 99.9% system uptime guaranteed
+                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
+                                        "Scientific Baccalaureate — Series C"
+                                    </span><br />
+                                    <span className="text-(--text-secondary) ml-10">
+                                        "institution" :
                                     </span>
-                                </div>
-
-                                <div className="pl-4">
-                                    <span className="code-comment"># MTTR: &lt; 2 minutes</span>
-                                </div>
-
-                                <div className="pl-4">
-                                    <span className="code-comment"># Monthly incidents: 0</span>
+                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
+                                        "Saint-Joseph de Cluny High School, Fianarantsoa"
+                                    </span><br />
+                                    <span className="text-green-500 ml-5">{'}'}</span> <br />
+                                    <span className="code-keyword">{']'}</span> <br />
                                 </div>
                             </div>
                         </div>
