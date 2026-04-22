@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
         company: 'ENI',
         location: 'Fianarantsoa 301, Madagascar',
         description:
-            "I created and implemented a comprehensive automation system for email analysis that leverages AI and n8n workflows. An interactive interface was built to visualize the processed emails, which facilitates effective filtering, organization, and provides real-time insights into the data.",
+            'I created and implemented a comprehensive automation system for email analysis that leverages AI and n8n workflows. An interactive interface was built to visualize the processed emails, which facilitates effective filtering, organization, and provides real-time insights into the data.',
         tags: ['React.js', 'PostgreSQL', 'Flask', 'N8N', 'Docker'],
         image: '/experiences/n8n-autoflow.png',
     },

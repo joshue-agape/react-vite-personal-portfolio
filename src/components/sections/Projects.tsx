@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projects } from '@/data/projects';
-import { Star, ExternalLink, GitBranch, Layers } from 'lucide-react';
+import { Star, ExternalLink, GitBranch, Layers, FolderGit2 } from 'lucide-react';
 import { staggerContainer, staggerItem } from '../../utils/animations';
 
 const GithubIcon = () => (
@@ -98,7 +98,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                     </div>
                 )}
 
-                <div className="flex flex-wrap gap-1.5 mb-5">
+                <div className="flex flex-wrap gap-1.5">
                     {project.tags.map((tag) => (
                         <span
                             key={tag}
@@ -109,35 +109,40 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                     ))}
                 </div>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-(--border)">
-                    <motion.a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors bg-(--bg-tertiary) text-(--text-secondary) border border-(--border)"
-                    >
-                        <GithubIcon />
-                        GitHub
-                    </motion.a>
-                    <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg"
-                        style={{ background: colors.bg, color: colors.text }}
-                    >
-                        <ExternalLink size={12} />
-                        Demo
-                    </motion.a>
-
-                    <motion.div className="ml-auto" animate={{ x: hovered ? 4 : 0 }}>
-                        <GitBranch size={14} style={{ color: colors.text }} />
-                    </motion.div>
-                </div>
+                {(project.github || project.demo) && (
+                    <div className="flex items-center gap-3 pt-4 border-t border-(--border) mt-5">
+                        {project.github && (
+                            <motion.a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors bg-(--bg-tertiary) text-(--text-secondary) border border-(--border)"
+                            >
+                                <GithubIcon />
+                                GitHub
+                            </motion.a>
+                        )}
+                        {project.demo && (
+                            <motion.a
+                                href={project.demo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg"
+                                style={{ background: colors.bg, color: colors.text }}
+                            >
+                                <ExternalLink size={12} />
+                                Demo
+                            </motion.a>
+                        )}
+                        <motion.div className="ml-auto" animate={{ x: hovered ? 4 : 0 }}>
+                            <GitBranch size={14} style={{ color: colors.text }} />
+                        </motion.div>
+                    </div>
+                )}
             </div>
         </motion.div>
     );
@@ -148,7 +153,9 @@ export default function Projects() {
     const [activeCategory, setActiveCategory] = useState('All');
 
     const filtered =
-        activeCategory === 'All' ? projects : projects.filter((p) => p.category.startsWith(activeCategory));
+        activeCategory === 'All'
+            ? projects
+            : projects.filter((p) => p.category.startsWith(activeCategory));
 
     return (
         <section id="projects" className="py-28 relative">
@@ -204,18 +211,49 @@ export default function Projects() {
 
                 {/* Grid */}
                 <AnimatePresence mode="wait">
-                    <motion.div
-                        key={activeCategory}
-                        variants={staggerContainer}
-                        initial="hidden"
-                        animate="visible"
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-start"
-                    >
-                        {filtered.map((project, index) => (
-                            <ProjectCard key={index} project={project} />
-                        ))}
-                    </motion.div>
+                    {filtered.length > 0 ? (
+                        <motion.div
+                            key={activeCategory}
+                            variants={staggerContainer}
+                            initial="hidden"
+                            animate="visible"
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 items-start"
+                        >
+                            {filtered.map((project, index) => (
+                                <ProjectCard key={index} project={project} />
+                            ))}
+                        </motion.div>
+                    ) : (
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{ duration: 0.4 }}
+                            className="w-full min-h-100 rounded-2xl border border-dashed border-neutral-700 bg-gray-950/30 backdrop-blur-sm flex items-center justify-center flex-col text-center p-10"
+                        >
+                            {/* Icon */}
+                            <div className="p-4 rounded-full bg-neutral-800 border border-neutral-700 mb-6 shadow-inner">
+                                <FolderGit2 className="w-10 h-10 text-neutral-400" />
+                            </div>
+
+                            {/* Title */}
+                            <h1 className="text-2xl font-semibold text-neutral-100 tracking-tight">
+                                No Projects Found
+                            </h1>
+
+                            {/* Description */}
+                            <p className="text-neutral-400 mt-3 max-w-md text-sm leading-relaxed">
+                                There are currently no projects to display. Stay tuned — new work
+                                will be added soon.
+                            </p>
+
+                            {/* Optional Button */}
+                            <button className="mt-6 px-5 py-2.5 text-sm font-medium rounded-lg bg-neutral-800 hover:bg-neutral-700 transition-colors border border-neutral-700 text-neutral-200">
+                                Refresh
+                            </button>
+                        </motion.div>
+                    )}
                 </AnimatePresence>
             </div>
         </section>

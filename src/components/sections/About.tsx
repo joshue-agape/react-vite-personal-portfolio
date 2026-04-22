@@ -147,29 +147,35 @@ export default function About() {
                                     <span className="text-(--text-secondary) ml-10">
                                         "degree" :
                                     </span>
-                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
-                                        "Professional Bachelor's Degree — Software Engineering & Databases"
-                                    </span><br />
+                                    <span className="ml-1.5 text-orange-500 dark:text-orange-400">
+                                        "Professional Bachelor's Degree — Software Engineering &
+                                        Databases"
+                                    </span>
+                                    <br />
                                     <span className="text-(--text-secondary) ml-10">
                                         "institution" :
                                     </span>
-                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
-                                        "University of Fianarantsoa · National School of Computer Science"
-                                    </span><br />
+                                    <span className="ml-1.5 text-orange-500 dark:text-orange-400">
+                                        "University of Fianarantsoa · National School of Computer
+                                        Science"
+                                    </span>
+                                    <br />
                                     <span className="text-green-500 ml-5">{'},'}</span> <br />
                                     <span className="text-green-500 ml-5">{'{'}</span> <br />
                                     <span className="text-(--text-secondary) ml-10">
                                         "degree" :
                                     </span>
-                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
+                                    <span className="ml-1.5 text-orange-500 dark:text-orange-400">
                                         "Scientific Baccalaureate — Series C"
-                                    </span><br />
+                                    </span>
+                                    <br />
                                     <span className="text-(--text-secondary) ml-10">
                                         "institution" :
                                     </span>
-                                    <span className='ml-1.5 text-orange-500 dark:text-orange-400'>
+                                    <span className="ml-1.5 text-orange-500 dark:text-orange-400">
                                         "Saint-Joseph de Cluny High School, Fianarantsoa"
-                                    </span><br />
+                                    </span>
+                                    <br />
                                     <span className="text-green-500 ml-5">{'}'}</span> <br />
                                     <span className="code-keyword">{']'}</span> <br />
                                 </div>
