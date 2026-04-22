@@ -93,7 +93,7 @@ export const projects: Project[] = [
     {
         title: 'Sendora',
         description:
-            'A personal portfolio designed to highlight my projects, technical skills, and professional experience, featuring a performant, responsive, and user-focused interface.',
+            'A web application designed to manage my job applications efficiently, helping prevent duplicate submissions to the same position or company. It also includes features for organizing and tracking my schedule, providing a structured and user-friendly interface.',
         tags: ['React', 'Material UI', 'FastAPI', 'Tailwindcss', 'PostgreSQL'],
         category: 'Web Application + cloud',
         github: '#',
@@ -153,6 +153,20 @@ export const toolbox: ToolBox[] = [
         title: 'FastAPI Project',
         description: 'Predefined aliases for FastAPI projects to speed up project creation and setup.',
         color: 'orange',
+        type: 'Alias PowerShell Windows',
+    },
+    {
+        source: 'https://github.com/joshue-agape/ps-vue-project-aliases',
+        title: 'VueJS Project',
+        description: 'Predefined aliases for VueJS projects to speed up project creation and setup.',
+        color: 'purple',
+        type: 'Alias PowerShell Windows',
+    },
+    {
+        source: 'https://github.com/joshue-agape/ps-react-project-aliases',
+        title: 'ReactJS Project',
+        description: 'Predefined aliases for ReactJS projects to speed up project creation and setup.',
+        color: 'accent',
         type: 'Alias PowerShell Windows',
     },
 ];
